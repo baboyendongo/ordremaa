@@ -1,0 +1,126 @@
+.oma-law-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+  }
+  
+  .oma-law-card {
+    padding: 2rem;
+  }
+  
+  .oma-law-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid #c3a35b;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .oma-law-icon {
+    font-size: 1.8rem;
+    color: #c3a35b;
+  }
+  
+  .oma-law-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .oma-law-intro {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .oma-law-desc {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .oma-law-section {
+    margin-bottom: 2rem;
+  }
+  
+  .oma-law-section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .oma-law-section-icon {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .oma-law-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .oma-law-list {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .oma-law-list li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #444;
+  }
+  
+  .oma-law-list ul {
+    list-style: disc;
+    margin-top: 0.5rem;
+    margin-left: 1.5rem;
+  }
+  
+  .oma-law-bullet {
+    color: #c3a35b;
+    margin-right: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .oma-law-conclusion {
+    border-top: 1px dashed #ccc;
+    padding-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .oma-law-download-section {
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  
+  .oma-law-download-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #c3a35b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .oma-law-download-btn:hover {
+    background-color: #a8853f;
+  }
+  
+  .oma-law-download-icon {
+    margin-right: 0.5rem;
+  }
+  

@@ -1,0 +1,36 @@
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const slides = document.querySelectorAll('.carousel-slide');
+          const dots   = document.querySelectorAll('.carousel-dots .dot');
+          let currentIndex = 0;
+      
+          function showSlide(index) {
+            slides.forEach((s, i) => {
+              s.classList.toggle('active', i === index);
+              dots[i].classList.toggle('active', i === index);
+            });
+          }
+      
+          function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+          }
+      
+          setInterval(nextSlide, 5000);
+      
+          dots.forEach((d, i) => {
+            d.addEventListener('click', () => {
+              currentIndex = i;
+              showSlide(currentIndex);
+            });
+          });
+      
+          showSlide(currentIndex);
+        });
+      </script>
+      
+<app-nav-bar></app-nav-bar>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
