@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-accueil',
   standalone: false,
   templateUrl: './accueil.html',
-  styleUrl: './accueil.css'
+  styleUrls: ['./accueil.css','./accueil1.css']
 })
 export class Accueil {
 
