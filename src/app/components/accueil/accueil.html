@@ -1,19 +1,126 @@
-<header class="oaa-header">
-  <div class="oaa-header-top">
-    <div class="oaa-logo">
-      <img src="https://ordredesarchitectes.be/assets/img/logo.svg" alt="OMA Logo" height="64">
-    </div>
-    <button class="oaa-burger" aria-label="Ouvrir le menu" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen">
-      <span></span><span></span><span></span>
-    </button>
-    <nav class="oaa-nav" [class.open]="menuOpen">
-      <a routerLink="/accueil" (click)="menuOpen = false">Accueil</a>
-      <a routerLink="/oma" (click)="menuOpen = false">OMA</a>
-      <a routerLink="/travailler" (click)="menuOpen = false">Travailler avec un architecte</a>
-      <a routerLink="/mediatheque" (click)="menuOpen = false">Mediatheque</a>
-      <a routerLink="/faq" (click)="menuOpen = false">FAQ</a>
-      <a routerLink="/contact" (click)="menuOpen = false">Contact</a>
-    </nav>
+
+<!-- HERO SECTION avec CTA -->
+<section class="hero-carousel-container">
+  <div class="hero-left">
+    <h1>Construire avec un architecte, c’est construire durablement</h1>
+    <p>Découvrez le rôle essentiel de l'architecte dans votre projet</p>
+    <button class="cta-btn">Trouver un architecte</button>
   </div>
-  <div class="oaa-separateur"></div>
-</header>
+  <div class="hero-right">
+    <div class="carousel-wrapper">
+      <div class="carousel-slide active">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Architecture moderne">
+        <div class="carousel-caption">Architecture moderne</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=1200&q=80" alt="Bâtiment traditionnel">
+        <div class="carousel-caption">Bâtiment traditionnel</div>
+      </div>
+      <div class="carousel-slide">
+        <img src="https://img.icons8.com/ios-filled/100/7a5c1c/blueprint.png" alt="Plan architectural">
+        <div class="carousel-caption">Plan architectural</div>
+      </div>
+    </div>
+    <div class="carousel-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI UN ARCHITECTE ? -->
+<section class="pourquoi-archi-section">
+  <h2>Pourquoi choisir un architecte ?</h2>
+  <div class="pourquoi-archi-grid">
+    <div class="pourquoi-card">
+      <div class="pourquoi-icone"><img src="https://img.icons8.com/ios-filled/50/7a5c1c/checked--v1.png" alt="Expertise"></div>
+      <h3>Expertise</h3>
+      <p>Des professionnels diplômés pour garantir la qualité et la sécurité de vos projets.</p>
+    </div>
+    <div class="pourquoi-card">
+      <div class="pourquoi-icone"><img src="https://img.icons8.com/ios-filled/50/7a5c1c/idea.png" alt="Créativité"></div>
+      <h3>Créativité</h3>
+      <p>Des solutions innovantes et personnalisées pour chaque client.</p>
+    </div>
+    <div class="pourquoi-card">
+      <div class="pourquoi-icone"><img src="https://img.icons8.com/ios-filled/50/7a5c1c/handshake.png" alt="Accompagnement"></div>
+      <h3>Accompagnement</h3>
+      <p>Un suivi de A à Z, de la conception à la réalisation.</p>
+    </div>
+    <div class="pourquoi-card">
+      <div class="pourquoi-icone"><img src="https://img.icons8.com/ios-filled/50/7a5c1c/eco.png" alt="Durabilité"></div>
+      <h3>Durabilité</h3>
+      <p>Des projets respectueux de l’environnement et des normes en vigueur.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ACTUALITÉS / ÉVÉNEMENTS -->
+<section class="actus-section">
+  <h2>Actualités & Événements</h2>
+  <div class="actus-grid">
+    <div class="actus-card">
+      <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80" alt="Journée Portes Ouvertes">
+      <div class="actus-content">
+        <h4>Journée Portes Ouvertes</h4>
+        <p>Venez découvrir les nouveaux projets de l’OMA et rencontrer nos architectes.</p>
+        <a href="#" class="actus-link">En savoir plus</a>
+      </div>
+    </div>
+    <div class="actus-card">
+      <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=400&q=80" alt="Conférence Architecture durable">
+      <div class="actus-content">
+        <h4>Conférence « Architecture durable »</h4>
+        <p>Table-ronde sur les matériaux écologiques et la construction bioclimatique.</p>
+        <a href="#" class="actus-link">En savoir plus</a>
+      </div>
+    </div>
+    <div class="actus-card">
+      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Atelier Jeunes Architectes">
+      <div class="actus-content">
+        <h4>Atelier Jeunes Architectes</h4>
+        <p>Un atelier créatif pour les jeunes talents de demain.</p>
+        <a href="#" class="actus-link">En savoir plus</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION VISUELLE -->
+<section class="mission-archi-section">
+  <h2>Notre mission</h2>
+  <div class="mission-archi-blocs">
+    <div class="mission-bloc">
+      <div class="mission-icone">
+        <img src="https://img.icons8.com/ios-filled/100/c3a35b/blueprint.png" alt="Mission OMA" />
+      </div>
+      <h3>Encadrer la profession</h3>
+      <div class="mission-separator"></div>
+      <p>53 architectes inscrits à l’Ordre, garants de l’éthique et de la qualité.</p>
+    </div>
+    <div class="mission-bloc">
+      <div class="mission-icone">
+        <img src="https://img.icons8.com/ios-filled/100/7a5c1c/handshake.png" alt="Travailler avec un architecte" />
+      </div>
+      <h3>Accompagner vos projets</h3>
+      <div class="mission-separator"></div>
+      <p>De la conception à la réalisation, l’OMA vous guide à chaque étape.</p>
+    </div>
+    <div class="mission-bloc">
+      <div class="mission-icone">
+        <img src="https://img.icons8.com/ios-filled/100/4caf50/eco.png" alt="Durabilité" />
+      </div>
+      <h3>Promouvoir la durabilité</h3>
+      <div class="mission-separator"></div>
+      <p>Favoriser l’innovation et le respect de l’environnement dans chaque projet.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER ACCUEIL -->
+
+
+
+
+
