@@ -1,1 +1,17 @@
-<p>faq works!</p>
+<section class="faq-section">
+  <div class="faq-header">
+    <h2>Foire aux questions</h2>
+    <p>Retrouvez ici les réponses aux questions les plus fréquentes sur l’Ordre Mauritanien des Architectes, la profession et vos démarches.</p>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item" *ngFor="let q of questions; let i = index">
+      <button class="faq-question" (click)="toggle(i)">
+        <span class="faq-q-icon">{{ openedIndex === i ? '▼' : '▶' }}</span>
+        {{ q.question }}
+      </button>
+      <div class="faq-answer" [class.open]="openedIndex === i">
+        <p>{{ q.answer }}</p>
+      </div>
+    </div>
+  </div>
+</section>

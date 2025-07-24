@@ -1,3 +1,4 @@
+
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
 
@@ -16,6 +17,8 @@ import { QuiEstArchi } from './components/travailler-avec-un-archi/qui-est-archi
 import { ListeArchitecte } from './components/travailler-avec-un-archi/liste-architecte/liste-architecte';
 import { LaMissionArchitecte } from './components/travailler-avec-un-archi/la-mission-architecte/la-mission-architecte';
 import { ReglementInterieur } from './components/oma/reglement-interieur/reglement-interieur';
+import { Mediatheque } from './components/mediatheque/mediatheque';
+import { LesPhases } from './components/travailler-avec-un-archi/les-phases/les-phases';
 
 
 @NgModule({
@@ -33,11 +36,13 @@ import { ReglementInterieur } from './components/oma/reglement-interieur/regleme
     QuiEstArchi,
     ListeArchitecte,
     LaMissionArchitecte,
-    ReglementInterieur
+    ReglementInterieur,
+    Mediatheque,
+    LesPhases
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

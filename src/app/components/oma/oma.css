@@ -1,50 +1,122 @@
+body, .oma-root {
+  background: linear-gradient(120deg, #f4f4f4 60%, #e9e4d5 100%);
+  min-height: 100vh;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  color: #222;
+}
+
+h2, h3 {
+  color: #7a5c1c;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  position: relative;
+}
+h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
+  content: "";
+  display: block;
+  margin: 1.1rem auto 0 auto;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
+  opacity: 0.7;
+}
 
 .rubriques-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 1rem;
-    background-color: #f4f4f4;
-  }
-  
-  .rubrique-card {
-    border: 1px solid #ccc;
-    background: #fff;
-    box-shadow: 2px 2px 0 #000;
-    transition: transform 0.2s ease;
-  }
-  
-  .rubrique-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .rubrique-title {
-    background: #000;
-    color: #fff;
-    font-weight: bold;
-    text-align: center;
-    padding: 1rem;
-    font-size: 1.1rem;
-    text-decoration: underline;
-  }
-  
-  .rubrique-content {
-    padding: 1rem;
-    font-size: 1rem;
-    color: #222;
-    line-height: 1.5;
-  }
-  
-/* Section Directeur */
-
-.directeur-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  padding: 2.5rem 1.5rem;
+  background: none;
+  border-radius: 24px;
+  box-shadow: none;
+  margin-bottom: 2.5rem;
+}
+.rubrique-card {
+  border: none;
   background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(122, 92, 28, 0.13), 0 2px 12px rgba(0,0,0,0.08);
+  transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s, background 0.22s;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 0.5rem;
+  animation: fadeInUp 0.8s;
+}
+.rubrique-card:hover {
+  transform: translateY(-12px) scale(1.035);
+  box-shadow: 0 16px 48px rgba(195,163,91,0.18), 0 4px 18px rgba(0,0,0,0.13);
+  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
+}
+.rubrique-title {
+  background: none;
+  color: #7a5c1c;
+  font-weight: 700;
   text-align: center;
-  padding: 3rem 1rem;
-  max-width: 900px;
-  margin: 3rem auto;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  padding: 1.2rem 1rem 0.7rem 1rem;
+  font-size: 1.18rem;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  position: relative;
+  animation: fadeInDown 1s;
+}
+.rubrique-title::after {
+  content: "";
+  display: block;
+  margin: 0.7rem auto 0 auto;
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
+  opacity: 0.7;
+}
+.rubrique-title a {
+  color: #7a5c1c;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.18s, text-decoration 0.18s;
+  position: relative;
+}
+.rubrique-title a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #c3a35b;
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+}
+.rubrique-title a:hover {
+  color: #c3a35b;
+  text-decoration: underline;
+}
+.rubrique-title a:hover::after {
+  width: 100%;
+}
+.rubrique-content {
+  padding: 1.1rem 1.2rem 1.5rem 1.2rem;
+  font-size: 1.04rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+  background: none;
+  animation: fadeInUp 1.2s;
+}
+
+.directeur-section, .organigramme-executif {
+  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(122, 92, 28, 0.13), 0 2px 12px rgba(0,0,0,0.08);
+  padding: 2.5rem 1.5rem;
+  margin: 2.5rem auto;
+  max-width: 1000px;
+  animation: fadeIn 1.1s;
 }
 .directeur-photo-center {
   display: flex;
@@ -55,36 +127,44 @@
   text-align: center;
 }
 .directeur-photo-center img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 160px;
   height: 160px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 18px rgba(195,163,91,0.13);
+  animation: fadeInDown 1.2s;
 }
 .directeur-nom {
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 700;
+  color: #7a5c1c;
   margin: 0.5rem 0;
 }
 .directeur-fonction {
   color: #555;
   margin-bottom: 0.3rem;
 }
-.directeur-phone {
-  display: inline-block;
-  color: #7a5c1c;
-  font-weight: 500;
-  text-decoration: none;
-  margin-bottom: 1rem;
-}
-.directeur-message {
-  margin-top: 2rem;
-}
 .directeur-message h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: #333;
+  color: #7a5c1c;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+}
+.directeur-message h3::after {
+  content: "";
+  display: block;
+  margin: 0.7rem auto 0 auto;
+  width: 48px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
+  opacity: 0.7;
 }
 .directeur-message p {
   font-size: 1.1rem;
@@ -92,136 +172,32 @@
   line-height: 1.6;
   max-width: 750px;
   margin: 0 auto;
+  animation: fadeInUp 1.3s;
 }
 
-/* Section Organigramme */
-.executif-section {
-  background: #fff;
-  padding: 3rem 1rem;
-  max-width: 1000px;
-  margin: 3rem auto;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-.executif-section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.6rem;
-  color: #111;
-}
-.organigramme {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.executif-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.executif-node {
-  text-align: center;
-  max-width: 200px;
-}
-.executif-node img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 0.8rem;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-}
-.nom {
-  font-weight: 600;
-  font-size: 1.05rem;
-  color: #222;
-}
-.fonction {
-  font-size: 0.95rem;
-  color: #555;
-}
-.top {
-  margin-bottom: 1rem;
+.organigramme-executif h2 {
+  color: #7a5c1c;
+  margin-bottom: 2.2rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.01em;
   position: relative;
 }
-.top::after {
-  content: '';
+.organigramme-executif h2::after {
+  content: "";
   display: block;
-  width: 2px;
-  height: 40px;
-  background: #ccc;
-  margin: 0 auto;
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-@media (max-width: 700px) {
-  .executif-row {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-}
-
-.executif-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-  margin-top: 2rem;
-}
-.executif-card {
-  background: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-  padding: 1.2rem 1rem 1.2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 160px;
-  max-width: 220px;
-}
-.executif-card img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 0.7rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-.executif-nom {
-  font-weight: 600;
-  color: #111;
-  margin-bottom: 0.2rem;
-  text-align: center;
-}
-.executif-fonction {
-  color: #444;
-  font-size: 0.98rem;
-  text-align: center;
-}
-
-.organigramme-executif {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  max-width: 900px;
-  margin: 2.5rem auto;
-  padding: 2rem 1.5rem;
-  text-align: center;
-}
-.organigramme-executif h2 {
-  color: #111;
-  margin-bottom: 2.2rem;
-  font-size: 1.4rem;
-  font-weight: 700;
+  margin: 1.1rem auto 0 auto;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
+  opacity: 0.7;
 }
 .orga-container {
   display: flex;
   flex-direction: column;
-  gap: 2.2rem;
+  gap: 3rem;
   align-items: center;
 }
 .orga-row {
@@ -230,37 +206,38 @@
   justify-content: center;
   flex-wrap: wrap;
 }
-.orga-president {
-  justify-content: center;
-}
-.orga-intermediaire {
-  justify-content: center;
-}
-.orga-assesseurs {
-  justify-content: center;
-}
 .orga-card {
-  background: #f7f7f7;
-  border-radius: 10px;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
-  padding: 1.2rem 1rem 1.2rem 1rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(122, 92, 28, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 1.5rem 1.2rem;
+  min-width: 160px;
+  max-width: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 160px;
-  max-width: 220px;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+  margin-bottom: 1.2rem;
+  position: relative;
+  animation: fadeInUp 1.1s;
+}
+.orga-card:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 12px 36px rgba(195,163,91,0.18), 0 2px 12px rgba(0,0,0,0.10);
+  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
 }
 .orga-card img {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 0.7rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 18px rgba(195,163,91,0.13);
+  animation: fadeInDown 1.2s;
 }
 .orga-nom {
-  font-weight: 600;
-  color: #111;
+  font-weight: 700;
+  color: #7a5c1c;
   margin-bottom: 0.2rem;
   text-align: center;
 }
@@ -269,171 +246,45 @@
   font-size: 0.98rem;
   text-align: center;
 }
-@media (max-width: 700px) {
+.orga-president .orga-card {
+  border: 2px solid #c3a35b;
+}
+
+@media (max-width: 900px) {
+  .rubriques-section, .directeur-section, .organigramme-executif {
+    padding: 1.2rem 0.5rem;
+    border-radius: 12px;
+  }
   .orga-row {
     flex-direction: column;
     gap: 1.2rem;
   }
-}
-
-.oma-info-section {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  max-width: 900px;
-  margin: 2.5rem auto;
-  padding: 2rem 1.5rem;
-  text-align: left;
-}
-.oma-info-section h2 {
-  color: #111;
-  margin-bottom: 1.2rem;
-  font-size: 1.3rem;
-  font-weight: 700;
-}
-.oma-info-section p {
-  color: #444;
-  font-size: 1.08rem;
-  line-height: 1.7;
-  margin: 0;
-}
-@media (max-width: 700px) {
-  .oma-info-section {
-    padding: 1.2rem 0.7rem;
-  }
-  .oma-info-section h2 {
-    font-size: 1.08rem;
+  .orga-card {
+    max-width: 100%;
+    min-width: 0;
   }
 }
-
-.rubrique-title a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.18s, text-decoration 0.18s;
-}
-
 @media (max-width: 700px) {
-  .directeur-section, .organigramme-executif, .oma-info-section {
-    max-width: 100vw;
-    padding: 1rem 0.5rem;
-    margin: 1rem 0;
+  .rubriques-section, .directeur-section, .organigramme-executif {
+    padding: 0.7rem 0.2rem;
     border-radius: 7px;
   }
-  .directeur-photo-center img {
-    width: 90px;
-    height: 90px;
-  }
-  .directeur-nom {
+  h2, h3 {
     font-size: 1.1rem;
-  }
-  .executif-section, .organigramme-executif {
-    padding: 1rem 0.5rem;
-  }
-  .orga-card, .executif-card {
-    min-width: 120px;
-    max-width: 100%;
-    padding: 0.7rem 0.5rem;
-  }
-  .orga-card img, .executif-card img {
-    width: 54px;
-    height: 54px;
-  }
-  .orga-nom, .executif-nom {
-    font-size: 0.98rem;
-  }
-  .orga-fonction, .executif-fonction {
-    font-size: 0.92rem;
-  }
-  .rubriques-section {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding: 1rem 0.2rem;
-  }
-  .rubrique-title {
-    font-size: 1rem;
-    padding: 0.7rem;
-  }
-  .rubrique-content {
-    font-size: 0.95rem;
-    padding: 0.7rem;
   }
 }
-.organigramme-executif {
-    background-color: #fff;
-    padding: 3rem 1rem;
-    text-align: center;
-  }
-  
-  .organigramme-executif h2 {
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
-    color: #111;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05rem;
-  }
-  
-  .orga-container {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-  }
-  
-  .orga-row {
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .orga-card {
-    background: #f7f7f7;
-    border-radius: 12px;
-    padding: 1rem;
-    width: 180px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s;
-  }
-  
-  .orga-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .orga-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 0.8rem;
-  }
-  
-  .orga-nom {
-    font-weight: 600;
-    font-size: 1.1rem;
-    color: #111;
-  }
-  
-  .orga-fonction {
-    font-size: 0.95rem;
-    color: #555;
-    margin-top: 0.3rem;
-  }
-  
-  /* Couleurs spécifiques si besoin */
-  .orga-president .orga-card {
-    border: 2px solid #c3a35b;
-  }
-  
-  @media (max-width: 768px) {
-    .orga-card {
-      width: 140px;
-    }
-    .orga-card img {
-      height: 140px;
-    }
-  }
-  
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 
 

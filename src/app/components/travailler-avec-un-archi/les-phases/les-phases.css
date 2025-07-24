@@ -1,0 +1,110 @@
+.phases-etude-split {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 2.5rem auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 18px rgba(0,0,0,0.08);
+    padding: 2.5rem 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .phases-etude-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  
+  /* Partie texte à gauche */
+  .phases-etude-texts {
+    flex: 1.2;
+    min-width: 320px;
+    max-width: 500px;
+  }
+  
+  .phases-etude-texts h2 {
+    font-size: 1.7rem;
+    color: #111;
+    margin-bottom: 2.8rem;
+    font-weight: 700;
+  }
+  
+  .phases-etude-texts h2 span {
+    display: block;
+    font-size: 2.2rem;
+    color: #222;
+    font-weight: 700;
+    margin-top: 0.2rem;
+    letter-spacing: 0.01em;
+  }
+  
+  /* Étapes (1, 2, 3...) */
+  .etape-block {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1.7rem;
+    margin-bottom: 2.8rem;
+  }
+  
+  .etape-num {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #111;
+    min-width: 54px;
+    line-height: 1;
+  }
+  
+  .etape-titre {
+    font-size: 1.15rem;
+    color: #111;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  
+  .etape-soustitre {
+    font-size: 1rem;
+    color: #888;
+    font-weight: normal;
+  }
+  
+  .etape-desc {
+    font-size: 1.02rem;
+    color: #444;
+  }
+  
+  /* Partie images à droite */
+  .phases-etude-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  
+  .phases-etude-images img {
+    width: 380px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .phases-etude-split {
+      flex-direction: column;
+      gap: 1.5rem;
+      padding: 1.2rem 0.5rem;
+    }
+  
+    .phases-etude-images img {
+      width: 100%;
+      max-width: 100%;
+      height: 200px;
+    }
+  }
+  

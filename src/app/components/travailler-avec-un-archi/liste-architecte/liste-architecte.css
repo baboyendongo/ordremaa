@@ -44,6 +44,11 @@
     justify-content: center;
     transition: opacity 0.3s ease;
     font-size: 0.65rem;
+    font-weight: normal;
+  }
+  
+  .equipe-overlay strong {
+    font-weight: normal;
   }
   
   .equipe-card:hover .equipe-overlay {

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './nav-bar.css'
 })
 export class NavBar {
-
+  menuOpen = false;
 }

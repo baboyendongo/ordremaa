@@ -8,8 +8,11 @@ import { Histoire } from './components/oma/histoire/histoire';
 import { Loi2007 } from './components/oma/loi-2007/loi-2007';
 import { QuiEstArchi } from './components/travailler-avec-un-archi/qui-est-archi/qui-est-archi';
 import { ListeArchitecte } from './components/travailler-avec-un-archi/liste-architecte/liste-architecte';
+import { LesPhases } from './components/travailler-avec-un-archi/les-phases/les-phases';
 import { LaMissionArchitecte } from './components/travailler-avec-un-archi/la-mission-architecte/la-mission-architecte';
 import { ReglementInterieur } from './components/oma/reglement-interieur/reglement-interieur';
+import { Mediatheque } from './components/mediatheque/mediatheque';
+import { ContacterNous } from './components/contacter-nous/contacter-nous';
 
 
 const routes: Routes = [
@@ -24,6 +27,9 @@ const routes: Routes = [
   { path: 'histoire', component: Histoire },
   { path: 'la-loi', component: Loi2007 },
   { path: 'travailler', component: TravaillerAvecUnArchi },
+  { path: 'mediatheque', component: Mediatheque },
+  { path: 'les-phases', component: LesPhases },
+  { path: 'contact', component: ContacterNous },
   // { path: 'mediatheque', component: Mediatheque }, // À créer si besoin
   { path: 'faq', component: Faq },
 
