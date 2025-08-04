@@ -1,61 +1,367 @@
 
 .qui-est-archi-container {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
-  max-width: 500px;
+  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(122, 92, 28, 0.13), 0 2px 12px rgba(0,0,0,0.08);
+  max-width: 1000px;
   margin: 2.5rem auto;
-  padding: 2rem 1.2rem 1.5rem 1.2rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
+  animation: fadeIn 1.1s;
 }
+
+.qui-est-archi-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.qui-est-archi-icon {
+  font-size: 2.5rem;
+  color: #7a5c1c;
+}
+
 .qui-est-archi-container h2 {
-  font-size: 1.4rem;
-  color: #111;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #7a5c1c;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
   font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 0;
+  position: relative;
 }
-.qui-est-archi-container p {
-  font-size: 1.05rem;
-  color: #444;
+
+.qui-est-archi-container h2::after {
+  content: "";
+  display: block;
+  margin: 1.1rem auto 0 auto;
+  width: 60px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
+  opacity: 0.7;
+}
+
+.qui-est-archi-intro {
+  margin-bottom: 2.5rem;
+}
+
+.qui-est-archi-intro p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.qui-est-archi-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.qui-est-archi-section {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(122, 92, 28, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 2rem 1.5rem;
+  transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s;
+  animation: fadeInUp 0.8s;
+}
+
+.qui-est-archi-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 32px rgba(195,163,91,0.18), 0 2px 12px rgba(0,0,0,0.10);
+}
+
+.qui-est-archi-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
   margin-bottom: 1.5rem;
 }
-.archi-graphic {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.2rem;
+
+.qui-est-archi-section-icon {
+  font-size: 1.5rem;
+  color: #7a5c1c;
 }
-.archi-icone {
-  font-size: 2.5rem;
-  margin-bottom: 0.2rem;
+
+.qui-est-archi-section h3 {
+  font-size: 1.3rem;
+  color: #7a5c1c;
+  font-weight: 700;
+  margin: 0;
 }
-.archi-labels {
+
+/* Compétences */
+.qui-est-archi-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.qui-est-archi-skill {
   display: flex;
-  gap: 1.2rem;
-  justify-content: center;
-  font-size: 1rem;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.qui-est-archi-skill:hover {
+  transform: translateY(-2px);
+}
+
+.qui-est-archi-skill-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.qui-est-archi-skill-content h4 {
+  color: #7a5c1c;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.qui-est-archi-skill-content p {
   color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
 }
-.archi-avatar {
+
+/* Missions */
+.qui-est-archi-missions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.qui-est-archi-mission {
   display: flex;
-  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.qui-est-archi-mission:hover {
+  transform: translateY(-2px);
+}
+
+.qui-est-archi-mission-number {
+  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
-  margin-top: 0.7rem;
-}
-.archi-avatar-label {
+  justify-content: center;
+  font-weight: 700;
   font-size: 1rem;
-  color: #222;
-  margin-top: 0.3rem;
-  font-weight: 600;
+  flex-shrink: 0;
 }
+
+.qui-est-archi-mission-content h4 {
+  color: #7a5c1c;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.qui-est-archi-mission-content p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Domaines */
+.qui-est-archi-domains {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.qui-est-archi-domain {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.qui-est-archi-domain:hover {
+  transform: translateY(-2px);
+}
+
+.qui-est-archi-domain-icon {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.qui-est-archi-domain h4 {
+  color: #7a5c1c;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.qui-est-archi-domain p {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Formation */
+.qui-est-archi-formation {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.qui-est-archi-formation-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.qui-est-archi-formation-item:hover {
+  transform: translateY(-2px);
+}
+
+.qui-est-archi-formation-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.qui-est-archi-formation-content h4 {
+  color: #7a5c1c;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.qui-est-archi-formation-content p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Conclusion */
+.qui-est-archi-conclusion {
+  background: #eafbe7;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #1a4d2e;
+}
+
+.qui-est-archi-conclusion-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.qui-est-archi-conclusion p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .qui-est-archi-container {
+    padding: 1.5rem 1rem;
+    margin: 1.5rem auto;
+  }
+  
+  .qui-est-archi-container h2 {
+    font-size: 1.5rem;
+  }
+  
+  .qui-est-archi-intro p {
+    font-size: 1rem;
+  }
+  
+  .qui-est-archi-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .qui-est-archi-section h3 {
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width: 600px) {
   .qui-est-archi-container {
-    padding: 1rem 0.3rem;
-    border-radius: 7px;
+    padding: 1rem 0.5rem;
+    border-radius: 12px;
   }
-  .archi-labels {
+  
+  .qui-est-archi-container h2 {
+    font-size: 1.3rem;
+  }
+  
+  .qui-est-archi-intro p {
+    font-size: 0.95rem;
+  }
+  
+  .qui-est-archi-section {
+    padding: 1rem 0.8rem;
+    border-radius: 8px;
+  }
+  
+  .qui-est-archi-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .qui-est-archi-skills,
+  .qui-est-archi-missions,
+  .qui-est-archi-domains,
+  .qui-est-archi-formation {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .qui-est-archi-conclusion {
+    padding: 1rem;
     flex-direction: column;
-    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .qui-est-archi-conclusion p {
+    font-size: 0.95rem;
   }
 }
 

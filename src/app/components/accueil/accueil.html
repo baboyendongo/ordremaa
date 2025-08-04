@@ -2,12 +2,12 @@
 <!-- HERO SECTION avec CTA -->
 <section class="hero-carousel-container">
   <div class="hero-left">
-    <h1>Construire avec un architecte, c’est construire durablement</h1>
+    <h1>Construire avec un architecte, c'est construire durablement</h1>
     <p>Découvrez le rôle essentiel de l'architecte dans votre projet</p>
-    <button class="cta-btn">Trouver un architecte</button>
+    <button class="cta-btn" routerLink="/liste-architecte">Trouver un architecte</button>
   </div>
   <div class="hero-right">
-    <div class="carousel-wrapper">
+    <div class="carousel-wrapper" #carouselWrapper>
       <div class="carousel-slide active">
         <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Architecture moderne">
         <div class="carousel-caption">Architecture moderne</div>
@@ -22,9 +22,9 @@
       </div>
     </div>
     <div class="carousel-dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
+      <span class="dot active" (click)="goToSlide(0)"></span>
+      <span class="dot" (click)="goToSlide(1)"></span>
+      <span class="dot" (click)="goToSlide(2)"></span>
     </div>
   </div>
 </section>
@@ -51,7 +51,7 @@
     <div class="pourquoi-card">
       <div class="pourquoi-icone"><img src="https://img.icons8.com/ios-filled/50/7a5c1c/eco.png" alt="Durabilité"></div>
       <h3>Durabilité</h3>
-      <p>Des projets respectueux de l’environnement et des normes en vigueur.</p>
+      <p>Des projets respectueux de l'environnement et des normes en vigueur.</p>
     </div>
   </div>
 </section>
@@ -64,7 +64,7 @@
       <img src="https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=400&q=80" alt="Journée Portes Ouvertes">
       <div class="actus-content">
         <h4>Journée Portes Ouvertes</h4>
-        <p>Venez découvrir les nouveaux projets de l’OMA et rencontrer nos architectes.</p>
+        <p>Venez découvrir les nouveaux projets de l'OMA et rencontrer nos architectes.</p>
         <a href="#" class="actus-link">En savoir plus</a>
       </div>
     </div>
@@ -97,7 +97,7 @@
       </div>
       <h3>Encadrer la profession</h3>
       <div class="mission-separator"></div>
-      <p>53 architectes inscrits à l’Ordre, garants de l’éthique et de la qualité.</p>
+      <p>53 architectes inscrits à l'Ordre, garants de l'éthique et de la qualité.</p>
     </div>
     <div class="mission-bloc">
       <div class="mission-icone">
@@ -105,7 +105,7 @@
       </div>
       <h3>Accompagner vos projets</h3>
       <div class="mission-separator"></div>
-      <p>De la conception à la réalisation, l’OMA vous guide à chaque étape.</p>
+      <p>De la conception à la réalisation, l'OMA vous guide à chaque étape.</p>
     </div>
     <div class="mission-bloc">
       <div class="mission-icone">
@@ -113,7 +113,7 @@
       </div>
       <h3>Promouvoir la durabilité</h3>
       <div class="mission-separator"></div>
-      <p>Favoriser l’innovation et le respect de l’environnement dans chaque projet.</p>
+      <p>Favoriser l'innovation et le respect de l'environnement dans chaque projet.</p>
     </div>
   </div>
 </section>

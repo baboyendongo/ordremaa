@@ -1,18 +1,18 @@
 <header class="oaa-header">
   <div class="oaa-header-top">
     <div class="oaa-logo">
-      <img src="https://ordredesarchitectes.be/assets/img/logo.svg" alt="OMA Logo" height="64">
+      <img src="/assets/logo-oma.svg" alt="Ordre Mauritanien des Architectes - Mauritanie" height="70">
     </div>
-    <button class="oaa-burger" aria-label="Ouvrir le menu" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen">
+    <button class="oaa-burger" aria-label="Ouvrir le menu de navigation" (click)="menuOpen = !menuOpen" [attr.aria-expanded]="menuOpen">
       <span></span><span></span><span></span>
     </button>
     <nav class="oaa-nav" [class.open]="menuOpen">
-      <a routerLink="/accueil" (click)="menuOpen = false">Accueil</a>
-      <a routerLink="/oma" (click)="menuOpen = false">OMA</a>
-      <a routerLink="/travailler" (click)="menuOpen = false">Travailler avec un architecte</a>
-      <a routerLink="/mediatheque" (click)="menuOpen = false">Mediatheque</a>
-      <a routerLink="/faq" (click)="menuOpen = false">FAQ</a>
-      <a routerLink="/contact" (click)="menuOpen = false">Contact</a>
+      <a routerLink="/accueil" (click)="menuOpen = false" class="nav-link">Accueil</a>
+      <a routerLink="/oma" (click)="menuOpen = false" class="nav-link">À propos de l'OMA</a>
+      <a routerLink="/travailler" (click)="menuOpen = false" class="nav-link">Travailler avec un architecte</a>
+      <a routerLink="/mediatheque" (click)="menuOpen = false" class="nav-link">Médiathèque</a>
+      <a routerLink="/faq" (click)="menuOpen = false" class="nav-link">Questions fréquentes</a>
+      <a routerLink="/contact" (click)="menuOpen = false" class="nav-link">Nous contacter</a>
     </nav>
   </div>
   <div class="oaa-separateur"></div>

@@ -1,13 +1,13 @@
 body, .oma-root {
-  background: linear-gradient(120deg, #f4f4f4 60%, #e9e4d5 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9e4d5 50%, #f4f4f4 100%);
   min-height: 100vh;
-  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-family: 'Inter', 'Montserrat', 'Roboto', Arial, sans-serif;
   color: #222;
 }
 
 h2, h3 {
   color: #7a5c1c;
-  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+  font-family: 'Inter', 'Montserrat', 'Roboto', Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 0.01em;
   margin-top: 0;
@@ -38,7 +38,7 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
 }
 .rubrique-card {
   border: none;
-  background: #fff;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(122, 92, 28, 0.13), 0 2px 12px rgba(0,0,0,0.08);
   transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s, background 0.22s;
@@ -46,11 +46,13 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
   position: relative;
   padding-bottom: 0.5rem;
   animation: fadeInUp 0.8s;
+  border: 1px solid rgba(195, 163, 91, 0.1);
 }
 .rubrique-card:hover {
   transform: translateY(-12px) scale(1.035);
   box-shadow: 0 16px 48px rgba(195,163,91,0.18), 0 4px 18px rgba(0,0,0,0.13);
-  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f7ecd7 100%);
+  border-color: rgba(195, 163, 91, 0.3);
 }
 .rubrique-title {
   background: none;
@@ -110,13 +112,14 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
 }
 
 .directeur-section, .organigramme-executif {
-  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   border-radius: 24px;
   box-shadow: 0 8px 32px rgba(122, 92, 28, 0.13), 0 2px 12px rgba(0,0,0,0.08);
   padding: 2.5rem 1.5rem;
   margin: 2.5rem auto;
-  max-width: 1000px;
+  max-width: 1200px;
   animation: fadeIn 1.1s;
+  border: 1px solid rgba(195, 163, 91, 0.1);
 }
 .directeur-photo-center {
   display: flex;
@@ -137,6 +140,7 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
   margin-bottom: 1rem;
   box-shadow: 0 4px 18px rgba(195,163,91,0.13);
   animation: fadeInDown 1.2s;
+  border: 3px solid rgba(195, 163, 91, 0.2);
 }
 .directeur-nom {
   font-size: 1.5rem;
@@ -147,6 +151,7 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
 .directeur-fonction {
   color: #555;
   margin-bottom: 0.3rem;
+  font-weight: 600;
 }
 .directeur-message h3 {
   font-size: 1.4rem;
@@ -207,12 +212,12 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
   flex-wrap: wrap;
 }
 .orga-card {
-  background: #fff;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   border-radius: 18px;
   box-shadow: 0 4px 18px rgba(122, 92, 28, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
   padding: 1.5rem 1.2rem;
-  min-width: 160px;
-  max-width: 220px;
+  min-width: 180px;
+  max-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,11 +225,13 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
   margin-bottom: 1.2rem;
   position: relative;
   animation: fadeInUp 1.1s;
+  border: 1px solid rgba(195, 163, 91, 0.1);
 }
 .orga-card:hover {
   transform: translateY(-10px) scale(1.04);
   box-shadow: 0 12px 36px rgba(195,163,91,0.18), 0 2px 12px rgba(0,0,0,0.10);
-  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f7ecd7 100%);
+  border-color: rgba(195, 163, 91, 0.3);
 }
 .orga-card img {
   width: 120px;
@@ -234,22 +241,50 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
   margin-bottom: 1rem;
   box-shadow: 0 4px 18px rgba(195,163,91,0.13);
   animation: fadeInDown 1.2s;
+  border: 2px solid rgba(195, 163, 91, 0.2);
 }
 .orga-nom {
   font-weight: 700;
   color: #7a5c1c;
   margin-bottom: 0.2rem;
   text-align: center;
+  font-size: 1rem;
+  line-height: 1.3;
 }
 .orga-fonction {
   color: #444;
-  font-size: 0.98rem;
+  font-size: 0.9rem;
   text-align: center;
+  line-height: 1.4;
+  font-weight: 500;
 }
 .orga-president .orga-card {
   border: 2px solid #c3a35b;
+  background: linear-gradient(135deg, #ffffff 0%, #f7ecd7 100%);
 }
 
+/* Styles pour les membres avec missions spécifiques */
+.orga-card[alt*="Membre"] {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+  border: 1px solid rgba(122, 92, 28, 0.2);
+}
+
+.orga-card[alt*="Membre"]:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #e6f3ff 100%);
+  border-color: rgba(122, 92, 28, 0.4);
+}
+
+.orga-card[alt*="Membre Assesseur"] {
+  background: linear-gradient(135deg, #ffffff 0%, #fff0f5 100%);
+  border: 1px solid rgba(195, 163, 91, 0.2);
+}
+
+.orga-card[alt*="Membre Assesseur"]:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #ffe6f0 100%);
+  border-color: rgba(195, 163, 91, 0.4);
+}
+
+/* Responsive design amélioré */
 @media (max-width: 900px) {
   .rubriques-section, .directeur-section, .organigramme-executif {
     padding: 1.2rem 0.5rem;
@@ -263,6 +298,12 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
     max-width: 100%;
     min-width: 0;
   }
+  .orga-nom {
+    font-size: 0.95rem;
+  }
+  .orga-fonction {
+    font-size: 0.85rem;
+  }
 }
 @media (max-width: 700px) {
   .rubriques-section, .directeur-section, .organigramme-executif {
@@ -271,6 +312,13 @@ h2::after, .organigramme-executif h2::after, .directeur-section h2::after {
   }
   h2, h3 {
     font-size: 1.1rem;
+  }
+  .orga-card {
+    padding: 1rem 0.8rem;
+  }
+  .orga-card img {
+    width: 100px;
+    height: 100px;
   }
 }
 @keyframes fadeInUp {
