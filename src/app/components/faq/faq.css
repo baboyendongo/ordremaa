@@ -12,7 +12,7 @@
   margin-bottom: 2.2rem;
 }
 .faq-header h2 {
-  color: #7a5c1c;
+  color: var(--primary-color);
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.7rem;
@@ -26,7 +26,7 @@
   width: 60px;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
+  background: linear-gradient(90deg, var(--primary-color) 40%, var(--secondary-color) 100%);
   opacity: 0.7;
 }
 .faq-header p {
@@ -58,7 +58,7 @@
   background: none;
   border: none;
   outline: none;
-  color: #7a5c1c;
+  color: var(--primary-color);
   font-size: 1.13rem;
   font-weight: 700;
   text-align: left;
@@ -70,12 +70,12 @@
   transition: background 0.18s, color 0.18s;
 }
 .faq-question:hover {
-  background: #f7ecd7;
-  color: #c3a35b;
+  background: var(--secondary-color);
+  color: var(--secondary-color);
 }
 .faq-q-icon {
   font-size: 1.3rem;
-  color: #c3a35b;
+  color: var(--secondary-color);
   transition: transform 0.2s;
 }
 .faq-answer {

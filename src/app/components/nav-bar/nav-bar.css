@@ -25,7 +25,7 @@
 }
 
 .oaa-logo img {
-  height: 70px;
+  height: 90px; /* taille normale sur desktop */
   width: auto;
   display: block;
   transition: transform 0.3s ease, filter 0.3s ease;
@@ -63,14 +63,14 @@
   width: 20px;
   height: 2.5px;
   margin: 2.5px 0;
-  background: linear-gradient(90deg, #7a5c1c, #c3a35b);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
   border-radius: 1px;
   transition: all 0.3s ease;
 }
 
 .oaa-separateur {
   height: 3px;
-  background: linear-gradient(90deg, #7a5c1c, #c3a35b, #7a5c1c);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
   margin: 0;
   width: 100%;
   border-radius: 0;
@@ -104,7 +104,7 @@
 }
 
 .nav-link {
-  color: #7a5c1c;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -116,7 +116,7 @@
 }
 
 .nav-link:hover, .nav-link:focus {
-  color: #c3a35b;
+  color: var(--secondary-color);
   background: rgba(195, 163, 91, 0.1);
   transform: translateY(-1px);
 }
@@ -130,7 +130,7 @@
   }
   
   .oaa-logo img {
-    height: 60px;
+    height: 70px; /* tablette */
   }
   
   .oaa-nav {
@@ -177,7 +177,7 @@
   }
   
   .oaa-logo img {
-    height: 55px;
+    height: 60px; /* mobile */
   }
   
   .nav-link {

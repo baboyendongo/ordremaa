@@ -14,7 +14,7 @@ export class ListeArchitecte {
       telephone: '45254602',
       email: 'boubacar_messoud@yahoo.fr',
       structure: 'CAA - Cabinet d\'Architectes Associes',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo:''
     },
     {
       matricule: 'AR1978/003',
@@ -30,23 +30,23 @@ export class ListeArchitecte {
       telephone: '46431923',
       email: 'mamikeme@xn--ahoo-fsa.fr',
       structure: 'Diigokaba',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/Bintou_KABA.jpg'
     },
-    {
-      matricule: 'AR1986/005',
-      nom: 'Sall Abderahmane',
-      telephone: '22205151',
-      email: 'moodibocarmoodi@yahoo.fr',
-      structure: 'CAA - Cabinet d\'Architectes Associes',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
-    },
+    // {
+    //   matricule: 'AR1986/005',
+    //   nom: "N’diaye Mohamed EL Habib",
+    //   telephone: '22205151',
+    //   email: 'moodibocarmoodi@yahoo.fr',
+    //   structure: 'CAA - Cabinet d\'Architectes Associes',
+    //    photo: 'assets/La_liste_des_archis/Med El Moktar ROUEIHA.jpg'
+    // },
     {
       matricule: 'AR1987/006',
-      nom: 'N\'diaye Mohamed EL Habib',
+      nom: "N’diaye Mohamed EL Habib",
       telephone: '46416944',
       email: 'ndiayemhcau@yahoo.fr',
       structure: 'CAU : Cabinet d\'Architecture et d\'Urbanisme',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+       photo: 'assets/La_liste_des_archis/N’diaye Mohamed EL Habib.jpg'
     },
     {
       matricule: 'AR1988/007',
@@ -54,16 +54,16 @@ export class ListeArchitecte {
       telephone: '46418943',
       email: 'tacheikhna@yahoo.fr',
       structure: 'G.I.B',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: 'assets/La_liste_des_archis/Cheikhna Ould Taleb Ahmed.jpg'
     },
-    {
-      matricule: 'AR1992/008',
-      nom: 'Cheikh Ahmedou Ould Mohamed Mokhtar',
-      telephone: '46447813',
-      email: 'Chahmedoutas@gmail.com',
-      structure: 'TASMIM',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
-    },
+    // {
+    //   matricule: 'AR1992/008',
+    //   nom: 'Cheikh Ahmedou Ould Mohamed Mokhtar',
+    //   telephone: '46447813',
+    //   email: 'Chahmedoutas@gmail.com',
+    //   structure: 'TASMIM',
+    //   photo: 'assets/La_liste_des_archis/Cheikh Ahmedou Ould Mohamed Mokhtar.jpg'
+    // },
     {
       matricule: 'AR1992/009',
       nom: 'Lemat Hamadi El Vadel',
@@ -110,7 +110,7 @@ export class ListeArchitecte {
       telephone: '20020061',
       email: 'mcbingenieries@gmail.com',
       structure: 'MCB Multidisciplinary Consulting Bureau',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR1996_014 Mohameden Menih TAH.jpg'
     },
     {
       matricule: 'AR1996/015',
@@ -118,7 +118,7 @@ export class ListeArchitecte {
       telephone: '46411944',
       email: 'bat_controle@yahoo.fr',
       structure: 'BATIS CONTRÔLE',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR1996_015 Diakhate Issakha.jpg'
     },
     {
       matricule: 'AR1996/016',
@@ -158,7 +158,7 @@ export class ListeArchitecte {
       telephone: '36855051',
       email: 'Yahyafr@yahoo.fr',
       structure: 'BECI',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR2002_021 Yahya Ould Babana.jpg'
     },
     {
       matricule: 'AR2003/022',
@@ -174,7 +174,7 @@ export class ListeArchitecte {
       telephone: '46786710',
       email: 'abobi1@yahoo.fr',
       structure: 'CAUPID',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR2004_023 Abba Fall.jpg'
     },
     {
       matricule: 'AR2005/024',
@@ -222,7 +222,7 @@ export class ListeArchitecte {
       telephone: '44660166',
       email: 'mammehacen@gmail.com',
       structure: '2A-Architects',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR2010_029 Mohamed Ould Yedali.jpg'
     },
     {
       matricule: 'AR2010/030',
@@ -238,7 +238,7 @@ export class ListeArchitecte {
       telephone: '46737108',
       email: 'arshymed@gmail.com',
       structure: 'ARCHI - MED',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR2011_031 Mohamed El Hadj Brahim.jpg'
     },
     {
       matricule: 'AR1995/032',
@@ -270,7 +270,7 @@ export class ListeArchitecte {
       telephone: '48194425',
       email: 'aucaarchitecture@gmail.com',
       structure: 'AUCA Architecture',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR2014_035 Hadyetou Aly Camara.jpg'
     },
     {
       matricule: 'AR2014/036',
@@ -278,7 +278,7 @@ export class ListeArchitecte {
       telephone: '44144044',
       email: 'cheikh18@gmail.com',
       structure: 'REDWANE',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR2014_036 Cheikhani Mohameden Nahwi.jpg'
     },
     {
       matricule: 'AR2014/037',
@@ -302,7 +302,7 @@ export class ListeArchitecte {
       telephone: '20792525',
       email: 'fatimetounahoui@gmail.com',
       structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR2014_039 Fatimettou Nahwi.jpg'
     },
     {
       matricule: 'AR2014/040',
@@ -358,7 +358,7 @@ export class ListeArchitecte {
       telephone: '49293024',
       email: 'bllyarg@gmail.com',
       structure: 'L\'ARCHITECTE',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR2015_046 Yarg Bilal.jpg'
     },
     {
       matricule: 'AR2015/047',
@@ -373,8 +373,7 @@ export class ListeArchitecte {
       nom: 'Galledou cheikh Tidiane',
       telephone: '47728888',
       email: 'ctijane2@yahoo.fr',
-      structure: 'ADG',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/AR2014_038 Mohamed El Khalil Elemine.jpg'
     },
     {
       matricule: 'AR2020/049',
@@ -406,7 +405,7 @@ export class ListeArchitecte {
       telephone: '42867044',
       email: 'kassarchitecture@icloud.com',
       structure: 'KASS ARCHITECTURE',
-      photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
+      photo: '/assets/La_liste_des_archis/Boubacar ousmane SY.jpg'
     },
     {
       matricule: 'AR2021/053',
@@ -449,4 +448,22 @@ export class ListeArchitecte {
       photo: 'assets/portrait-de-jeune-femme-souriante-isolee.jpg'
     }
   ];
+
+  getNamePhoto(nom: string) {
+    if (!nom) return 'assets/portrait-de-jeune-femme-souriante-isolee.jpg';
+    const safe = nom.replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_\-\u00C0-\u017F]/g, '');
+    return `assets/La_liste_des_archis/${safe}.jpg`;
+  }
+
+  onPhotoError(event: any, membre: any) {
+    const img: HTMLImageElement = event.target as HTMLImageElement;
+    // if current src is name-based, try the membre.photo field next
+    const nameSrc = this.getNamePhoto(membre.nom);
+    if (img.src && img.src.indexOf(nameSrc) !== -1) {
+      img.src = membre.photo || 'assets/portrait-de-jeune-femme-souriante-isolee.jpg';
+      return;
+    }
+    // if membre.photo failed, use placeholder
+    img.src = 'assets/portrait-de-jeune-femme-souriante-isolee.jpg';
+  }
 }

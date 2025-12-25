@@ -5,7 +5,7 @@
   padding: 3rem 1rem 1.5rem 1rem;
   text-align: center;
   margin-top: 4rem;
-  border-top: 4px solid #c3a35b;
+  border-top: 4px solid var(--primary-color);
   border-radius: 0 0 20px 20px;
   box-shadow: 0 -4px 20px rgba(195, 163, 91, 0.15);
   position: relative;
@@ -19,7 +19,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: linear-gradient(90deg, #c3a35b 0%, #7a5c1c 50%, #c3a35b 100%);
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--primary-color) 100%);
   animation: shimmer 3s ease-in-out infinite;
 }
 .footer-content {

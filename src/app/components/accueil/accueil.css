@@ -1,6 +1,6 @@
 /* Styles de base */
 h1, h2, h3, h4 {
-  color: #7a5c1c;
+  color: var(--primary-color);
   font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -26,25 +26,61 @@ button {
   gap: 2.5rem;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 1500px;
+  height: 400px;
   margin: 2.5rem auto 2rem auto;
   padding: 2.5rem 2rem;
-  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
+  background: linear-gradient(120deg,var(--primary-color) 80%, #E2F4FF 100%);
   border-radius: 22px;
   box-shadow: 0 6px 32px rgba(122, 92, 28, 0.10), 0 2px 12px rgba(0,0,0,0.10);
   flex-wrap: wrap;
   position: relative;
   overflow: visible;
 }
+/* Decorative side graphics (place images in public/assets as decors-left.png / decors-right.png) */
+.hero-carousel-container::before,
+.hero-carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-carousel-container::before {
+  left: -40px;
+  background-image: url('/assets/decors-left.png');
+}
+.hero-carousel-container::after {
+  right: -40px;
+  background-image: url('/assets/acueil_image/Droite.png');
+}
+/* Ensure hero content stays above decorations */
+.hero-carousel-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .hero-carousel-container::before,
+  .hero-carousel-container::after {
+    display: none;
+  }
+}
 .hero-left {
   flex: 1;
   min-width: 280px;
-  text-align: left;
+  text-align: center;
+  color: #fff;
   animation: fadeInLeft 0.8s;
 }
 .hero-left h1 {
   font-size: 2.3rem;
-  color: #7a5c1c;
+  color: #ffffff;
   margin-bottom: 1.1rem;
   font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
   font-weight: 700;
@@ -55,28 +91,34 @@ button {
 }
 .hero-left p {
   font-size: 1.25rem;
-  color: #333;
+  color: #ffffff;
   margin-bottom: 0.7rem;
   animation: fadeInUp 1.2s;
 }
-.cta-btn {
-  background: linear-gradient(90deg, #7a5c1c 60%, #c3a35b 100%);
-  color: #fff;
-  font-size: 1.13rem;
-  font-weight: 600;
+  .cta-btn {
+  background: var(--secondary-color);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
   border: none;
-  border-radius: 24px;
-  padding: 0.85rem 2.2rem;
-  margin-top: 1.2rem;
-  box-shadow: 0 2px 8px rgba(122, 92, 28, 0.10);
+  border-radius: 9999px;
+  padding: 0.6rem 2.4rem;
+  margin: 1.2rem auto 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
   cursor: pointer;
-  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
-  letter-spacing: 0.01em;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: none;
+  display: block;
+  width: fit-content;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .cta-btn:hover, .cta-btn:focus {
-  background: linear-gradient(90deg, #c3a35b 60%, #7a5c1c 100%);
-  transform: translateY(-2px) scale(1.04);
-  box-shadow: 0 4px 18px rgba(195,163,91,0.18);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  background: color-mix(in srgb, var(--secondary-color) 85%, black 15%);
 }
 .hero-right {
   flex: 1;
@@ -144,18 +186,18 @@ button {
   margin-top: 1.2rem;
   gap: 12px;
 }
-.carousel-dots .dot {
+  .carousel-dots .dot {
   width: 16px;
   height: 16px;
   border-radius: 50%;
   background: #ccc;
-  border: 2px solid #7a5c1c;
+  border: 2px solid var(--primary-color);
   cursor: pointer;
   transition: background 0.3s, border 0.3s;
 }
-.carousel-dots .dot.active {
-  background: #c3a35b;
-  border-color: #c3a35b;
+  .carousel-dots .dot.active {
+    background: var(--primary-color);
+    border-color: var(--secondary-color);
 }
 
 @media (max-width: 900px) {

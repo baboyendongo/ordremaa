@@ -2,13 +2,13 @@
     <h2>les membres de Ordre mauritanien des architectes</h2>
     <div class="equipe-grid">
       <div class="equipe-card" *ngFor="let membre of membres">
-        <img [src]="membre.photo" alt="{{membre.nom}}">
+        <img [src]="getNamePhoto(membre.nom)" (error)="onPhotoError($event, membre)" alt="{{membre.nom}}">
         <div class="equipe-overlay">
-          <p><strong>Matricule :</strong> {{membre.matricule}}</p>
-          <p><strong>Nom :</strong> {{membre.nom}}</p>
-          <p><strong>Téléphone :</strong> {{membre.telephone}}</p>
-          <p><strong>Email :</strong> {{membre.email}}</p>
-          <p><strong>Structure :</strong> {{membre.structure}}</p>
+          <p><strong>Matricule :</strong> <span class="val">{{membre.matricule}}</span></p>
+          <p><strong>Nom :</strong> <span class="val">{{membre.nom}}</span></p>
+          <p><strong>Téléphone :</strong> <span class="val">{{membre.telephone}}</span></p>
+          <p><strong>Email :</strong> <span class="val">{{membre.email}}</span></p>
+          <p><strong>Structure :</strong> <span class="val">{{membre.structure}}</span></p>
         </div>
       </div>
     </div>

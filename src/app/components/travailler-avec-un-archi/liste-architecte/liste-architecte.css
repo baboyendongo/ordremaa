@@ -11,7 +11,7 @@
 }
 
 .equipe-section h2 {
-  color: #7a5c1c;
+  color: var(--primary-color);
   font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
   font-weight: 700;
   font-size: 2rem;
@@ -27,7 +27,7 @@
   width: 60px;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
+  background: linear-gradient(90deg, var(--primary-color) 40%, var(--secondary-color) 100%);
   opacity: 0.7;
 }
 
@@ -39,68 +39,114 @@
 }
 
 .equipe-card {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   border-radius: 18px;
-  box-shadow: 0 4px 18px rgba(122, 92, 28, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
-  transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s, background 0.22s;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.08);
+  transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s;
   cursor: pointer;
   background: #fff;
   animation: fadeInUp 0.8s;
 }
 
+/* Unique decorative accents for equipe cards */
+.equipe-card::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+  border-radius: 12px;
+  transform: rotate(15deg);
+  z-index: 3;
+  pointer-events: none;
+}
+.equipe-card::after {
+  content: "";
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(255,255,255,0.16);
+  border-radius: 50%;
+  z-index: 3;
+  pointer-events: none;
+}
+
 .equipe-card:hover {
-  transform: translateY(-10px) scale(1.04);
-  box-shadow: 0 12px 36px rgba(195,163,91,0.18), 0 2px 12px rgba(0,0,0,0.10);
-  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
+  transform: translateY(-8px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
 }
 
 .equipe-card img {
   width: 100%;
-  height: 200px;
+  height: 240px;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;
 }
 
 .equipe-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .equipe-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(34, 34, 34, 0.85);
-  color: white;
+  position: relative;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 10%, var(--primary-color) 30%);
+  color: #fff;
   width: 100%;
-  height: 100%;
-  opacity: 0;
-  padding: 1.5rem 1.2rem;
+  padding: 1.6rem 1.2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  transition: opacity 0.3s ease;
-  font-size: 0.8rem;
-  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-  line-height: 1.4;
+  text-align: center;
+  min-height: 120px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: 0 -6px 18px rgba(0,0,0,0.06) inset;
 }
 
 .equipe-overlay strong {
   font-weight: 700;
-  color: #c3a35b;
-  font-size: 0.85rem;
-  margin-bottom: 0.2rem;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
 }
 
 .equipe-overlay p {
   margin: 0.15rem 0;
-  color: #fff;
+  color: rgba(255,255,255,0.95);
+  font-size: 0.95rem;
 }
 
-.equipe-card:hover .equipe-overlay {
-  opacity: 1;
+.equipe-overlay .val {
+  display: block;
+  color: #ffffff;
 }
+
+/* Promote the name (2nd paragraph) */
+.equipe-overlay p:nth-of-type(2) .val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-top: 0.25rem;
+}
+
+/* small meta text style */
+.equipe-overlay p:nth-of-type(n+3) .val {
+  font-size: 0.9rem;
+  opacity: 0.95;
+}
+
+/* ensure overlays sit above decorative accents */
+.equipe-overlay { z-index: 4; }
 
 /* Animations conformes au design général */
 @keyframes fadeIn {
