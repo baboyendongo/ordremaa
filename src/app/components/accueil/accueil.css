@@ -23,41 +23,24 @@ button {
 /* HERO SECTION avec CTA */
 .hero-carousel-container {
   display: flex;
-  gap: 2.5rem;
   align-items: center;
   justify-content: center;
-  max-width: 1500px;
-  height: 400px;
-  margin: 2.5rem auto 2rem auto;
-  padding: 2.5rem 2rem;
-  background: linear-gradient(120deg,var(--primary-color) 80%, #E2F4FF 100%);
-  border-radius: 22px;
-  box-shadow: 0 6px 32px rgba(122, 92, 28, 0.10), 0 2px 12px rgba(0,0,0,0.10);
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  height: 420px;
+  margin: 1.2rem 0 2rem 0;
+  padding: 3.2rem 2rem;
+  background: #b66a22; /* warm brown background to match design */
+  border-radius: 0px;
+  box-shadow: none;
+  flex-wrap: nowrap;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 /* Decorative side graphics (place images in public/assets as decors-left.png / decors-right.png) */
 .hero-carousel-container::before,
 .hero-carousel-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 220px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: contain;
-  pointer-events: none;
-  z-index: 1;
-}
-.hero-carousel-container::before {
-  left: -40px;
-  background-image: url('/assets/decors-left.png');
-}
-.hero-carousel-container::after {
-  right: -40px;
-  background-image: url('/assets/acueil_image/Droite.png');
+  display: none;
 }
 /* Ensure hero content stays above decorations */
 .hero-carousel-container > * {
@@ -72,48 +55,55 @@ button {
   }
 }
 .hero-left {
-  flex: 1;
-  min-width: 280px;
+  flex: 0 1 1000px;
+  max-width: 1100px;
   text-align: center;
   color: #fff;
   animation: fadeInLeft 0.8s;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
 }
 .hero-left h1 {
-  font-size: 2.3rem;
+  font-size: clamp(28px, 6vw, 64px);
   color: #ffffff;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
   font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.01em;
-  line-height: 1.2;
-  text-shadow: 0 2px 12px rgba(195,163,91,0.08);
+  line-height: 1.05;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.15);
   animation: fadeInDown 1.1s;
+  text-align: center;
 }
 .hero-left p {
-  font-size: 1.25rem;
+  font-size: 1.12rem;
   color: #ffffff;
-  margin-bottom: 0.7rem;
+  margin: 0 auto 0.8rem auto;
+  max-width: 760px;
   animation: fadeInUp 1.2s;
+  text-align: center;
 }
-  .cta-btn {
-  background: var(--secondary-color);
-  color: #ffffff;
+.cta-btn {
+  background: #d8c9b0;
+  color: #1f1f1f;
   font-size: 1rem;
   font-weight: 700;
   border: none;
   border-radius: 9999px;
-  padding: 0.6rem 2.4rem;
-  margin: 1.2rem auto 0 auto;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  padding: 0.9rem 2.4rem;
+  margin: 1.6rem auto 0 auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
   letter-spacing: 0.06em;
   text-align: center;
   text-transform: none;
-  display: block;
-  width: fit-content;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  display: inline-block;
 }
 .cta-btn:hover, .cta-btn:focus {
   transform: translateY(-2px);
@@ -125,6 +115,27 @@ button {
   min-width: 320px;
   position: relative;
   animation: fadeInRight 0.8s;
+}
+
+/* Side decoration images placed using HTML <img> elements */
+.hero-deco-left,
+.hero-deco-right {
+  position: absolute;
+  top: -20px;
+  height: calc(100% + 40px);
+  width: auto;
+  max-width: 560px;
+  z-index: 1;
+  pointer-events: none;
+}
+.hero-deco-left { left: -90px; transform: none; }
+.hero-deco-right { right: -90px; transform: none; }
+
+@media (max-width: 900px) {
+  .hero-deco-left,
+  .hero-deco-right {
+    display: none;
+  }
 }
 .carousel-wrapper {
   position: relative;
@@ -272,37 +283,93 @@ button {
 
 /* POURQUOI UN ARCHITECTE ? */
 .pourquoi-archi-section {
-  margin: 3.5rem auto 2.5rem auto;
+  position: relative;
+  margin: 2.2rem auto;
   max-width: 1200px;
-  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(122, 92, 28, 0.08), 0 1.5px 6px rgba(0,0,0,0.03);
-  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  background: #fbf0e4; /* match newsletter */
+  padding: 2.2rem 1.5rem;
+  box-sizing: border-box;
+  overflow: visible;
 }
 .pourquoi-archi-section h2 {
-  color: #7a5c1c;
+  color: #b66a22;
   text-align: center;
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 2.2rem;
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
   letter-spacing: 0.01em;
-  position: relative;
 }
 .pourquoi-archi-section h2::after {
   content: "";
   display: block;
-  margin: 1.1rem auto 0 auto;
+  margin: 1rem auto 0 auto;
   width: 60px;
   height: 4px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
-  opacity: 0.7;
+  background: linear-gradient(90deg, #b66a22 40%, #c3a35b 100%);
+  opacity: 0.8;
 }
 .pourquoi-archi-grid {
   display: flex;
   gap: 2.2rem;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+/* MISSION SECTION DECOR */
+.mission-archi-section {
+  position: relative;
+  margin: 2.2rem auto;
+  max-width: 1200px;
+  background: #fbf0e4;
+  padding: 2.2rem 1.5rem;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.mission-archi-section h2 {
+  color: #b66a22;
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.mission-deco-left,
+.mission-deco-right {
+  position: absolute;
+  top: 8px;
+  height: calc(100% - 16px);
+  width: auto;
+  max-width: 260px;
+  z-index: 1;
+  pointer-events: none;
+}
+.mission-deco-left { left: -48px; }
+.mission-deco-right { right: -48px; transform: scaleX(-1); }
+
+@media (max-width: 900px) {
+  .mission-deco-left, .mission-deco-right { display: none; }
+  .mission-archi-section { padding: 1.2rem 0.8rem; }
+  .mission-archi-section h2 { font-size: 1.4rem; }
+}
+
+/* Decorations for POURQUOI section */
+.pourquoi-deco-left,
+.pourquoi-deco-right {
+  position: absolute;
+  top: 8px;
+  height: calc(100% - 16px);
+  width: auto;
+  max-width: 260px;
+  z-index: 1;
+  pointer-events: none;
+}
+.pourquoi-deco-left { left: -48px; }
+.pourquoi-deco-right { right: -48px; transform: scaleX(-1); }
+
+@media (max-width: 900px) {
+  .pourquoi-deco-left, .pourquoi-deco-right { display: none; }
+  .pourquoi-archi-section { padding: 1.2rem 0.8rem; }
+  .pourquoi-archi-section h2 { font-size: 1.6rem; }
 }
 .pourquoi-card {
   background: #fff;
@@ -345,11 +412,95 @@ button {
 
 /* ACTUALITÉS / ÉVÉNEMENTS */
 .actus-section {
-  margin: 3.5rem auto 2.5rem auto;
+  margin: 2.2rem auto;
   max-width: 1200px;
-  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(122, 92, 28, 0.08), 0 1.5px 6px rgba(0,0,0,0.03);
-  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+  background: #fbf0e4; /* match newsletter */
+  padding: 2.2rem 1.5rem;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.actus-section h2 { color: #b66a22; text-align: center; font-size: 2.1rem; font-weight: 800; margin-bottom: 1rem; }
+.actus-grid { display:flex; gap:1.2rem; flex-wrap:wrap; justify-content:center; }
+
+/* Decorations for ACTUS section */
+.actus-deco-left,
+.actus-deco-right {
+  position: absolute;
+  top: 8px;
+  height: calc(100% - 16px);
+  width: auto;
+  max-width: 260px;
+  z-index: 1;
+  pointer-events: none;
+}
+.actus-deco-left { left: -48px; }
+.actus-deco-right { right: -48px; transform: scaleX(-1); }
+
+@media (max-width: 900px) {
+  .actus-deco-left, .actus-deco-right { display: none; }
+  .actus-section { padding: 1.2rem 0.8rem; }
+  .actus-section h2 { font-size: 1.4rem; }
+}
+
+/* NEWSLETTER / BANNER */
+.newsletter-section {
+  position: relative;
+  margin: 2.2rem auto;
+  background: #fbf0e4; /* light beige */
+  max-width: 1200px;
+  padding: 2.2rem 1.5rem;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.newsletter-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.newsletter-section h2 {
+  font-size: 48px;
+  margin: 0 0 0.6rem 0;
+  color: #b66a22;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+}
+.newsletter-section p {
+  color: #222;
+  max-width: 920px;
+  margin: 0 auto 1.4rem auto;
+  line-height: 1.6;
+}
+.newsletter-btn {
+  background: #b66a22;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 2.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+.newsletter-deco-left,
+.newsletter-deco-right {
+  position: absolute;
+  top: 12px;
+  height: calc(100% - 24px);
+  width: auto;
+  max-width: 260px;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: none;
+}
+.newsletter-deco-left { left: -40px; }
+.newsletter-deco-right { right: -40px; transform: scaleX(-1); }
+
+@media (max-width: 900px) {
+  .newsletter-section { padding: 1.2rem 0.8rem; }
+  .newsletter-deco-left, .newsletter-deco-right { display: none; }
+  .newsletter-section h2 { font-size: 28px; }
+  .newsletter-section p { font-size: 0.95rem; }
 }
 

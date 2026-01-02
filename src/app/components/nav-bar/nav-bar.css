@@ -25,17 +25,14 @@
 }
 
 .oaa-logo img {
-  height: 90px; /* taille normale sur desktop */
+  height: 80px; /* taille initiale plus compacte */
   width: auto;
   display: block;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.12));
+  transition: filter 0.2s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
 }
 
-.oaa-logo img:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.2));
-}
+.oaa-logo img:hover { filter: drop-shadow(0 3px 6px rgba(0,0,0,0.12)); }
 
 .oaa-burger {
   display: none;
@@ -98,9 +95,8 @@
   display: flex;
   gap: 1.2rem;
   flex: 1;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  margin-left: 2rem;
 }
 
 .nav-link {
@@ -177,7 +173,7 @@
   }
   
   .oaa-logo img {
-    height: 60px; /* mobile */
+    height: 90px; /* mobile */
   }
   
   .nav-link {

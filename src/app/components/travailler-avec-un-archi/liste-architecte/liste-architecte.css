@@ -102,6 +102,9 @@
   padding: 1.6rem 1.2rem;
   display: flex;
   flex-direction: column;
+  .equipe-card {
+    position: relative;
+  }
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -118,6 +121,23 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
+  .equipe-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(0,0,0, .65) 0%, rgba(0,0,0, .45) 50%, rgba(0,0,0, .65) 100%);
+    color: #fff;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity .22s ease, transform .22s ease;
+    pointer-events: none;
+    z-index: 5;
+  }
 }
 
 .equipe-overlay p {
@@ -126,25 +146,52 @@
   font-size: 0.95rem;
 }
 
+  .equipe-overlay strong {
+    font-weight: 700;
+    color: rgba(255,255,255, .95);
+    font-size: .78rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+  }
 .equipe-overlay .val {
   display: block;
   color: #ffffff;
 }
 
+  .equipe-overlay p {
+    margin: .12rem 0;
+    color: rgba(255,255,255, .98);
+    font-size: .95rem;
+  }
 /* Promote the name (2nd paragraph) */
 .equipe-overlay p:nth-of-type(2) .val {
   font-size: 1.15rem;
   font-weight: 700;
+  .equipe-overlay .val {
+    display: block;
+    color: #fff;
+  }
   letter-spacing: 0.02em;
   margin-top: 0.25rem;
 }
 
 /* small meta text style */
 .equipe-overlay p:nth-of-type(n+3) .val {
+  .equipe-overlay p:nth-of-type(2) .val {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    margin-top: .25rem;
+  }
   font-size: 0.9rem;
   opacity: 0.95;
 }
 
+  .equipe-overlay p:nth-of-type(n+3) .val {
+    font-size: .9rem;
+    opacity: .95;
+  }
 /* ensure overlays sit above decorative accents */
 .equipe-overlay { z-index: 4; }
 
@@ -200,4 +247,17 @@
     font-size: 0.8rem;
   }
 }
+
+/* Improved image wrapper and overlay behavior to avoid layout shift
+   - preserves aspect ratio, uses object-fit, and shows overlay only on image hover */
+.image-wrapper{position:relative;width:100%;overflow:hidden;border-radius:14px 14px 0 0;background:#eee;aspect-ratio:3/4}
+.image-wrapper img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.image-wrapper:hover img{transform:scale(1.03)}
+.image-wrapper .equipe-overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:1rem;background:linear-gradient(180deg,rgba(0,0,0,.65) 0%,rgba(0,0,0,.45) 50%,rgba(0,0,0,.65) 100%);color:#fff;opacity:0;transform:translateY(8px);transition:opacity .22s ease,transform .22s ease;pointer-events:none;z-index:5}
+.image-wrapper:hover .equipe-overlay{opacity:1;transform:translateY(0);pointer-events:auto}
+
+/* persistent caption on image bottom */
+.image-caption{position:absolute;left:0;right:0;bottom:0;padding:.5rem .75rem;background:linear-gradient(90deg,var(--secondary-color) 40%,var(--primary-color) 100%);color:#fff;text-align:center;z-index:4;border-radius:0 0 12px 12px;box-shadow:0 -4px 12px rgba(0,0,0,.08)}
+.image-caption .image-name{display:block;font-weight:700;font-size:1rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
   

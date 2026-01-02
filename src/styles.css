@@ -196,15 +196,15 @@ button {
   flex-shrink: 0;
 }
 .oaa-logo img {
-  height: 90px; /* taille normale sur desktop */
+  height: 80px; /* taille initiale plus compacte */
   width: auto;
-  display: block;
-  transition: transform 0.25s ease, filter 0.25s ease;
-  filter: drop-shadow(0 3px 6px rgba(0,0,0,0.12));
+   display: block;
+  transition: filter 0.2s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
 }
-.oaa-logo img:hover { transform: scale(1.03); }
+.oaa-logo img:hover { filter: drop-shadow(0 3px 6px rgba(0,0,0,0.12)); }
 .oaa-burger { display: none; }
-.oaa-nav { display: flex; gap: 1.2rem; flex: 1; justify-content: center; align-items: center; margin-left: 2rem; }
+.oaa-nav { display: flex; gap: 1.2rem; flex: 1; justify-content: flex-end; align-items: center; }
 .nav-link { color: var(--primary-color); text-decoration: none; font-weight: 600; font-size: 1rem; padding: 0.5rem 1rem; border-radius: 8px; transition: all 0.2s ease; }
 .nav-link:hover { color: var(--secondary-color); background: rgba(195,163,91,0.08); transform: translateY(-1px); }
 
@@ -216,7 +216,7 @@ button {
 }
 
 @media (max-width: 600px) {
-  .oaa-logo img { height: 60px; }
+  .oaa-logo img { height: 90px; }
 }
 
 /* Global accent rules: apply primary color across components */
