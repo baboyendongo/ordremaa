@@ -2,7 +2,7 @@
     <h2>les membres de Ordre mauritanien des architectes</h2>
     <div class="equipe-grid">
       <div class="equipe-card" *ngFor="let membre of membres">
-        <img [src]="getNamePhoto(membre.nom)" (error)="onPhotoError($event, membre)" alt="{{membre.nom}}">
+        <img [src]="membre.photo ? normalizePath(membre.photo) : getNamePhoto(membre.nom)" (error)="onPhotoError($event, membre)" alt="{{membre.nom}}" loading="lazy">
         <div class="equipe-overlay">
           <p><strong>Matricule :</strong> <span class="val">{{membre.matricule}}</span></p>
           <p><strong>Nom :</strong> <span class="val">{{membre.nom}}</span></p>

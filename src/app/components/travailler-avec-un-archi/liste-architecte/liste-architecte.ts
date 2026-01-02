@@ -451,19 +451,36 @@ export class ListeArchitecte {
 
   getNamePhoto(nom: string) {
     if (!nom) return 'assets/portrait-de-jeune-femme-souriante-isolee.jpg';
-    const safe = nom.replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_\-\u00C0-\u017F]/g, '');
-    return `assets/La_liste_des_archis/${safe}.jpg`;
+    // Use the original name spacing/characters to match actual filenames in assets
+    const safe = nom.replace(/\s+/g, ' ').trim();
+    return encodeURI(`assets/La_liste_des_archis/${safe}.jpg`);
   }
 
   onPhotoError(event: any, membre: any) {
     const img: HTMLImageElement = event.target as HTMLImageElement;
-    // if current src is name-based, try the membre.photo field next
-    const nameSrc = this.getNamePhoto(membre.nom);
-    if (img.src && img.src.indexOf(nameSrc) !== -1) {
-      img.src = membre.photo || 'assets/portrait-de-jeune-femme-souriante-isolee.jpg';
+    // Try fallbacks in order: if initial src was membre.photo -> try generated name, then placeholder
+    const photoProvided = membre.photo && membre.photo.length > 0;
+    if (photoProvided && img.src && img.src.indexOf(normalizePathForCompare(membre.photo)) !== -1) {
+      img.src = this.getNamePhoto(membre.nom);
       return;
     }
-    // if membre.photo failed, use placeholder
+    // If initial was generated name or second attempt failed, use placeholder
     img.src = 'assets/portrait-de-jeune-femme-souriante-isolee.jpg';
   }
+
+  normalizePath(path: string) {
+    if (!path) return 'assets/portrait-de-jeune-femme-souriante-isolee.jpg';
+    const p = path.startsWith('/') ? path.slice(1) : path;
+    return encodeURI(p);
+  }
+
 }
+
+// helper used inside onPhotoError when comparing img.src (absolute) with member.photo
+function normalizePathForCompare(p: string) {
+  if (!p) return '';
+  const path = p.startsWith('/') ? p.slice(1) : p;
+  // encode spaces for comparison with img.src which will be absolute URL-encoded
+  return encodeURI(path);
+}
+
