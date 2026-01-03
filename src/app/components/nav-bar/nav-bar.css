@@ -1,21 +1,23 @@
 /* Styles de base */
 /* Styles de base */
 .oaa-header {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-  border-bottom: 1px solid #e9e4d5;
+  background: #ffffff;
+  box-shadow: none;
+  /* Cleaner look */
+  border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
+  padding-top: 1rem;
 }
+
 .oaa-header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 1rem 1.5rem 0.6rem 1.5rem;
+  padding: 1rem 2rem;
 }
 
 .oaa-logo {
@@ -25,14 +27,16 @@
 }
 
 .oaa-logo img {
-  height: 80px; /* taille initiale plus compacte */
+  height: 120px;
   width: auto;
   display: block;
-  transition: filter 0.2s ease;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+  transition: filter 0.2s ease, transform 0.2s ease;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.08));
 }
 
-.oaa-logo img:hover { filter: drop-shadow(0 3px 6px rgba(0,0,0,0.12)); }
+.oaa-logo img:hover {
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.12));
+}
 
 .oaa-burger {
   display: none;
@@ -66,69 +70,69 @@
 }
 
 .oaa-separateur {
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
-  margin: 0;
-  width: 100%;
-  border-radius: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-.oaa-separateur::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  display: none;
 }
 
 .oaa-nav {
   display: flex;
-  gap: 1.2rem;
+  gap: 3.5rem;
+  /* Wider spacing */
   flex: 1;
   justify-content: flex-end;
   align-items: center;
 }
 
 .nav-link {
-  color: var(--primary-color);
+  color: #C67826;
+  /* Gold color */
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
   transition: all 0.3s ease;
   position: relative;
   white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.nav-link:hover, .nav-link:focus {
-  color: var(--secondary-color);
-  background: rgba(195, 163, 91, 0.1);
-  transform: translateY(-1px);
+/* Remove old hover background */
+.nav-link:hover,
+.nav-link:focus {
+  color: #b0651d;
+  background: none;
+  transform: none;
+}
+
+/* Active State Underline */
+.nav-link.active::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  /* Thick underline */
+  background: #C67826;
+  position: absolute;
+  bottom: -5px;
+  /* Spacing below text */
+  left: 0;
+  border-radius: 2px;
 }
 
 .nav-link:active {
   transform: translateY(0);
 }
+
 @media (max-width: 900px) {
   .oaa-header-top {
     padding: 0.8rem 1rem 0.5rem 1rem;
   }
-  
+
   .oaa-logo img {
-    height: 70px; /* tablette */
+    height: 100px;
+    /* tablet */
   }
-  
+
   .oaa-nav {
     position: fixed;
     top: 0;
@@ -144,13 +148,13 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 110;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
-  
+
   .oaa-nav.open {
     transform: translateX(0);
   }
-  
+
   .nav-link {
     font-size: 1.1rem;
     padding: 1rem 2rem;
@@ -158,29 +162,31 @@
     text-align: center;
     border-bottom: 1px solid rgba(195, 163, 91, 0.1);
   }
-  
+
   .nav-link:last-child {
     border-bottom: none;
   }
-  
+
   .oaa-burger {
     display: flex;
   }
 }
+
 @media (max-width: 600px) {
   .oaa-header-top {
     padding: 0.6rem 0.8rem 0.4rem 0.8rem;
   }
-  
+
   .oaa-logo img {
-    height: 90px; /* mobile */
+    height: 100px;
+    /* mobile */
   }
-  
+
   .nav-link {
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
   }
-  
+
   .oaa-nav {
     padding-top: 4rem;
   }
@@ -190,9 +196,8 @@
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(0);
   }
 }
-  
-  

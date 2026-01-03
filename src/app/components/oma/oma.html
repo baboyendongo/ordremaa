@@ -1,116 +1,70 @@
 <section class="rubriques-section">
   <div class="rubrique-card">
-    <div class="rubrique-title" > <a href="/histoire">Histoire de l'Ordre</a></div>
+    <div class="rubrique-title"> <a href="/histoire">Histoire de l'Ordre</a></div>
     <div class="rubrique-content">
-      L'Ordre Mauritanien des Architectes a été créé pour encadrer la profession, valoriser le métier d'architecte et garantir la qualité de l'environnement bâti. Depuis sa création, il joue un rôle central dans l'organisation, la formation et la reconnaissance des architectes en Mauritanie.
+      L'Ordre Mauritanien des Architectes a été créé pour encadrer la profession, valoriser le métier d'architecte et
+      garantir la qualité de l'environnement bâti. Depuis sa création, il joue un rôle central dans l'organisation, la
+      formation et la reconnaissance des architectes en Mauritanie.
     </div>
   </div>
-   <div class="rubrique-card">
-   
-    <div class="rubrique-title">  <a href="/la-loi">La loi de 2009</a></div>
+  <div class="rubrique-card">
+
+    <div class="rubrique-title"> <a href="/la-loi">La loi de 2009</a></div>
     <div class="rubrique-content">
-      La loi n°2007-009 relative à la réglementation de la profession d'architecte en Mauritanie définit les conditions d'exercice, les droits et devoirs des architectes ainsi que le rôle de l'Ordre dans la supervision et le respect de la déontologie.
+      La loi n°2007-009 relative à la réglementation de la profession d'architecte en Mauritanie définit les conditions
+      d'exercice, les droits et devoirs des architectes ainsi que le rôle de l'Ordre dans la supervision et le respect
+      de la déontologie.
     </div>
 
   </div>
   <div class="rubrique-card">
-   
-    <div class="rubrique-title">  <a href="/reglement-interieur"> Règlement intérieur de l'Ordre</a></div>
+
+    <div class="rubrique-title"> <a href="/reglement-interieur"> Règlement intérieur de l'Ordre</a></div>
     <div class="rubrique-content">
-      L`ordre des architectes exerce ses attributions par trois organes : - le conseil de l`ordre - le conseil de discipline - la chambre de discipline 
-Définis respectivement par les Articles 26, 27, 28, 29, 30, 31, 32, 33, 34,35 et 36 de la loi 2009-028 du 
-13 avril 2009
+      L`ordre des architectes exerce ses attributions par trois organes : - le conseil de l`ordre - le conseil de
+      discipline - la chambre de discipline
+      Définis respectivement par les Articles 26, 27, 28, 29, 30, 31, 32, 33, 34,35 et 36 de la loi 2009-028 du
+      13 avril 2009
     </div>
 
   </div>
 </section>
 
 <!-- SECTION DIRECTEUR MODERNE -->
-<section class="">
-  <div class="">
-    <img src="../../public/assets/photo des archis 1/LES ARCHIS D1/DG ould TAH .jpg" alt="Directeur OMA" />
+<section class="directeur-section">
+  <div class="directeur-photo-center">
+    <img src="assets/La_liste_des_archis/AR1996_014 Mohameden Menih TAH.jpg" alt="Directeur OMA" />
     <h2 class="directeur-nom">Mohameden Menih TAH</h2>
     <div class="directeur-fonction">President de l'Ordre Mauritanien des Architectes</div>
   </div>
   <div class="directeur-message">
     <h3>Mot du President</h3>
     <p>
-      C'est avec un grand plaisir  que je vous présente l'édition 2024 de l'Annuaire des architectes de l'Ordre Mauritaniens des Architectes. Ce recueil incarne notre communauté dynamique et diversifiée , témoigne de notre engagement envers l'excellence professionnelle et la promotion de l'Architecture en Mauritanie. 
-Cet annuaire est bien plus qu'une simple liste de noms ; il est une vitrine de nos talents et de notre passion pour l'architecture ; chaque structure que nous concevons incarne nos rêves, notre créativité et notre engagement pour repousser sans cesse les limites de l'innovation et de la durabilité, façonnant ainsi le paysage urbain et la société mauritanienne dans son ensemble. 
- Que vous soyez un professionnel à la recherche de partenaire pour un projet ou un client public ou privé , nous sommes convaincus que cet annuaire répondra à vos attentes . En choisissant de travailler avec un architecte mauritanien , vous optez pour un partenaire dévoué qui transformera vos idées en réalité , avec style , fonctionnalité et intégrité. 
-n'hésitez ps a nous offrir l'opportunité de donner vie à vos projets les plus audacieux . 
+      C'est avec un grand plaisir que je vous présente l'édition 2024 de l'Annuaire des architectes de l'Ordre
+      Mauritaniens des Architectes. Ce recueil incarne notre communauté dynamique et diversifiée , témoigne de notre
+      engagement envers l'excellence professionnelle et la promotion de l'Architecture en Mauritanie.
+      Cet annuaire est bien plus qu'une simple liste de noms ; il est une vitrine de nos talents et de notre passion
+      pour l'architecture ; chaque structure que nous concevons incarne nos rêves, notre créativité et notre engagement
+      pour repousser sans cesse les limites de l'innovation et de la durabilité, façonnant ainsi le paysage urbain et la
+      société mauritanienne dans son ensemble.
+      Que vous soyez un professionnel à la recherche de partenaire pour un projet ou un client public ou privé , nous
+      sommes convaincus que cet annuaire répondra à vos attentes . En choisissant de travailler avec un architecte
+      mauritanien , vous optez pour un partenaire dévoué qui transformera vos idées en réalité , avec style ,
+      fonctionnalité et intégrité.
+      n'hésitez ps a nous offrir l'opportunité de donner vie à vos projets les plus audacieux .
 
     </p>
   </div>
 </section>
 
-<section class="section organigramme-executif">
+<section class="equipe-section section organigramme-executif">
   <h2>MEMBRES DU CONSEIL</h2>
-  <div class="orga-container">
-    <!-- Président au sommet -->
-    <div class="orga-row orga-president">
-      <div class="orga-card">
-        <img src="" alt="Président">
-        <div class="orga-nom">Mohameden Menih TAH</div>
-        <div class="orga-fonction">Président</div>
-      </div>
+  <div class="orga-row">
+    <div class="orga-card" *ngFor="let membre of conseil">
+      <img [src]="getFallbackSrc(membre)" [srcset]="getSrcset(membre)" sizes="(max-width:600px) 100vw, 300px"
+        (error)="onImageError($event, membre)" alt="{{membre.nom}}" loading="lazy" decoding="async">
+      <div class="orga-nom">{{membre.nom}}</div>
+      <div class="orga-fonction">{{membre.fonction}}</div>
     </div>
-    <!-- Ligne intermédiaire -->
-    <div class="orga-row orga-intermediaire">
-      <div class="orga-card">
-        <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Vice-Président">
-        <div class="orga-nom">Mohamed El Khalil</div>
-        <div class="orga-fonction">Vice-Président</div>
-      </div>
-      <div class="orga-card">
-        <img src="https://randomuser.me/api/portraits/men/46.jpg" alt="Secrétaire Général">
-        <div class="orga-nom">Boubacar Sy</div>
-        <div class="orga-fonction">Secrétaire Général</div>
-      </div>
-      <div class="orga-card">
-        <img src="https://randomuser.me/api/portraits/men/47.jpg" alt="Trésorier">
-        <div class="orga-nom">Mohamed Ould Abdelweddoud</div>
-        <div class="orga-fonction">Trésorier</div>
-      </div>
-      <div class="orga-card">
-        <img src="https://randomuser.me/api/portraits/men/48.jpg" alt="Trésorier Adjoint">
-        <div class="orga-nom">Cheikh El Moustapha Ould M. Yahya</div>
-        <div class="orga-fonction">Trésorier Adjoint</div>
-      </div>
-    </div>
-    <!-- Membres en bas -->
-    <div class="orga-row orga-assesseurs">
-      <div class="orga-card">
-        <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Membre Assesseur">
-        <div class="orga-nom">Mme Fatimetou NAHOUI</div>
-        <div class="orga-fonction">Membre Assesseur</div>
-      </div>
-      <div class="orga-card">
-        <img src="https://randomuser.me/api/portraits/women/52.jpg" alt="Membre Assesseur">
-        <div class="orga-nom">Mme Aminata LÔ</div>
-        <div class="orga-fonction">Membre Assesseur</div>
-      </div>
-    </div>
-      <div class="orga-row orga-assesseurs">
-    <div class="orga-card">
-      <img src="https://randomuser.me/api/portraits/men/49.jpg" alt="Membre">
-      <div class="orga-nom"> Mohamed El Mokhtar El SID </div>
-      <div class="orga-fonction"> chargé de l’Harmonisation des Livrables des Architectes</div>
-    </div>
-    <div class="orga-card">
-      <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="Membre">
-      <div class="orga-nom">Yarg Bilal </div>
-      <div class="orga-fonction">chargé de la Communication et des Relations avec le public.</div>
-    </div>
-    </div>
-  
-    </div>
-
-
-  
+  </div>
 </section>
-
-
-
-
-
