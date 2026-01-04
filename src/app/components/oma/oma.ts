@@ -98,7 +98,7 @@ export class Oma {
       img.src = this.getNamePhoto(membre.nom);
       return;
     }
-    img.src = 'assets/utilisateur.svg';
+    img.src = 'assets/utilisateur.png';
   }
 
   normalizePathForCompare(p: string) {
