@@ -1,17 +1,63 @@
-<section class="faq-section">
-  <div class="faq-header">
-    <h2>Foire aux questions</h2>
-    <p>Retrouvez ici les réponses aux questions les plus fréquentes sur l’Ordre Mauritanien des Architectes, la profession et vos démarches.</p>
-  </div>
-  <div class="faq-list">
-    <div class="faq-item" *ngFor="let q of questions; let i = index">
-      <button class="faq-question" (click)="toggle(i)">
-        <span class="faq-q-icon">{{ openedIndex === i ? '▼' : '▶' }}</span>
-        {{ q.question }}
+<section class="section-beige faq-section">
+  <img src="/assets/icon/Gauche.png" alt="" class="section-deco-left">
+  <img src="/assets/icon/Droite.png" alt="" class="section-deco-right-top">
+
+  <div class="faq-container">
+    <div class="faq-header">
+      <img src="assets/icon/icon principale.png" alt="OMA Icon" class="header-main-icon">
+      <h2>Foire aux Questions</h2>
+      <div class="header-underline"></div>
+      <p class="faq-subtitle">Retrouvez ici les réponses aux questions les plus fréquentes sur l'Ordre Mauritanien des Architectes</p>
+    </div>
+
+    <div class="faq-intro-card">
+      <p class="intro-text">
+        Vous avez des questions sur l'Ordre, la profession d'architecte, vos démarches ou vos projets ? 
+        Consultez notre FAQ pour trouver rapidement les réponses à vos interrogations.
+      </p>
+    </div>
+
+    <!-- Filtres par catégorie -->
+    <div class="faq-filters">
+      <button 
+        *ngFor="let cat of categories" 
+        (click)="selectedCategory = cat.value"
+        [class.active]="selectedCategory === cat.value"
+        class="filter-btn">
+        <span class="filter-icon">{{ cat.icon }}</span>
+        {{ cat.label }}
       </button>
-      <div class="faq-answer" [class.open]="openedIndex === i">
-        <p>{{ q.answer }}</p>
+    </div>
+
+    <!-- Liste des questions -->
+    <div class="faq-list">
+      <div 
+        *ngFor="let q of getFilteredQuestions(); let i = index" 
+        class="faq-item"
+        [class.open]="openedIndex === i">
+        <button class="faq-question" (click)="toggle(i)">
+          <div class="faq-question-content">
+            <span class="faq-q-number">{{ (i + 1).toString().padStart(2, '0') }}</span>
+            <span class="faq-q-text">{{ q.question }}</span>
+          </div>
+          <span class="faq-q-icon">{{ openedIndex === i ? '−' : '+' }}</span>
+        </button>
+        <div class="faq-answer" [class.open]="openedIndex === i">
+          <div class="faq-answer-content">
+            <p>{{ q.answer }}</p>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- Section Contact -->
+    <div class="faq-contact">
+      <div class="faq-contact-icon">💬</div>
+      <h3>Vous ne trouvez pas la réponse à votre question ?</h3>
+      <p>N'hésitez pas à nous contacter directement. Notre équipe est à votre disposition pour vous accompagner.</p>
+      <a href="/contact" class="faq-contact-btn">Nous contacter</a>
+    </div>
   </div>
+
+  <img src="/assets/icon/icon%20principale%20en%20grand.png" alt="" class="section-deco-right">
 </section>

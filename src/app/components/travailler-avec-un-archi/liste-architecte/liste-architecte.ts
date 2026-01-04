@@ -183,14 +183,14 @@ export class ListeArchitecte {
       structure: 'ARCHI-ZONE',
       photo: 'assets/La_liste_des_archis/AR2022_054 Ahmed Mohamed Mahmoud.jpg'
     },
-    // {
-    //   matricule: 'AR1992/008',
-    //   nom: 'Cheikh Ahmedou Ould Mohamed Mokhtar',
-    //   telephone: '46447813',
-    //   email: 'Chahmedoutas@gmail.com',
-    //   structure: 'TASMIM',
-    //   photo: 'assets/La_liste_des_archis/Cheikh Ahmedou Ould Mohamed Mokhtar.jpg'
-    // },
+    {
+      matricule: 'AR1992/008',
+      nom: 'Cheikh Ahmedou Ould Mohamed Mokhtar',
+      telephone: '46447813',
+      email: 'Chahmedoutas@gmail.com',
+      structure: 'TASMIM',
+      photo: 'assets/La_liste_des_archis/Cheikh Ahmedou Ould Mohamed Mokhtar.jpg'
+    },
     {
       matricule: 'AR1992/009',
       nom: 'Lemat Hamadi El Vadel',

@@ -1,99 +1,104 @@
-<!-- EN-TÊTE MÉDIATHÈQUE -->
-<section class="mediatheque-section">
-  <div class="mediatheque-header">
-    <h2>Médiathèque</h2>
-    <p>Découvrez les activités, photos et vidéos de l’Ordre Mauritanien des Architectes.</p>
-  </div>
+<section class="section-beige mediatheque-section">
+  <img src="/assets/icon/Gauche.png" alt="" class="section-deco-left">
+  <img src="/assets/icon/Droite.png" alt="" class="section-deco-right-top">
 
-  <!-- À LA UNE -->
-  <div class="mediatheque-featured">
-    <div class="featured-card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="À la une">
-      <div class="featured-content">
-        <h3>À la une : Inauguration du nouveau siège</h3>
-        <p>Retour en images sur l’inauguration du nouveau siège de l’OMA, symbole d’innovation et de modernité architecturale en Mauritanie.</p>
-        <button class="featured-btn">Voir l'album</button>
+  <div class="mediatheque-container">
+    <div class="mediatheque-header">
+      <img src="assets/icon/icon principale.png" alt="OMA Icon" class="header-main-icon">
+      <h2>Médiathèque</h2>
+      <div class="header-underline"></div>
+      <p class="mediatheque-subtitle">Découvrez les activités, photos et vidéos de l'Ordre Mauritanien des Architectes</p>
+    </div>
+
+    <div class="mediatheque-intro-card">
+      <p class="intro-text">
+        Explorez notre collection de photographies et de documents visuels qui témoignent de la richesse architecturale de la Mauritanie, 
+        de ses monuments historiques à ses réalisations contemporaines.
+      </p>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="mediatheque-tabs">
+      <button (click)="selectedTab='photos'" [class.active]="selectedTab==='photos'">
+        <span class="tab-icon">🖼️</span> Photos
+      </button>
+      <button (click)="selectedTab='events'" [class.active]="selectedTab==='events'">
+        <span class="tab-icon">📅</span> Activités
+      </button>
+      <button (click)="selectedTab='videos'" [class.active]="selectedTab==='videos'">
+        <span class="tab-icon">🎬</span> Vidéos
+      </button>
+    </div>
+
+    <!-- PHOTOS SECTION -->
+    <section *ngIf="selectedTab==='photos'" class="mediatheque-photos-section">
+      <div class="photos-filters">
+        <button 
+          *ngFor="let cat of getCategories()" 
+          (click)="selectedCategory = cat"
+          [class.active]="selectedCategory === cat"
+          class="filter-btn">
+          {{ cat === 'all' ? 'Toutes' : (cat === 'mosquees' ? 'Mosquées' : (cat === 'villes' ? 'Villes' : (cat === 'patrimoine' ? 'Patrimoine' : (cat === 'symboles' ? 'Symboles' : 'Autres')))) }}
+        </button>
       </div>
+
+      <div class="mediatheque-grid">
+        <div 
+          *ngFor="let item of getFilteredGallery(); let i = index" 
+          class="media-tile" 
+          (click)="openMedia(item, i)">
+          <div class="media-image-wrapper">
+            <img [src]="item.thumb" [alt]="item.title || 'Image'" loading="lazy">
+            <div class="media-overlay">
+              <span class="media-icon">🔍</span>
+              <span class="media-title">{{ item.title }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITÉS SECTION -->
+    <section *ngIf="selectedTab==='events'" class="mediatheque-events-section">
+      <div class="events-timeline">
+        <div *ngFor="let ev of activities; let i = index" class="event-card">
+          <div class="event-image-wrapper">
+            <img *ngIf="ev.cover" [src]="ev.cover" [alt]="ev.title" loading="lazy">
+            <div class="event-badge">
+              <span class="event-badge-icon">📅</span>
+              <span class="event-badge-text">{{ ev.date }}</span>
+            </div>
+          </div>
+          <div class="event-content">
+            <h3>{{ ev.title }}</h3>
+            <p>{{ ev.description }}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDÉOS SECTION -->
+    <section *ngIf="selectedTab==='videos'" class="mediatheque-videos-section">
+      <div class="videos-placeholder">
+        <div class="placeholder-icon">🎬</div>
+        <h3>Vidéos à venir</h3>
+        <p>Les vidéos seront bientôt disponibles dans cette section.</p>
+      </div>
+    </section>
+
+    <!-- Citation -->
+    <div class="mediatheque-quote">
+      <blockquote>« L'architecture est le jeu savant, correct et magnifique des volumes assemblés sous la lumière. »</blockquote>
+      <div class="quote-author">— Le Corbusier</div>
     </div>
   </div>
 
-  <div class="mediatheque-tabs">
-    <button (click)="selectedTab='events'" [class.active]="selectedTab==='events'"><span class="tab-icon">📅</span> Activités</button>
-    <button (click)="selectedTab='photos'" [class.active]="selectedTab==='photos'"><span class="tab-icon">🖼️</span> Photos</button>
-    <button (click)="selectedTab='videos'" [class.active]="selectedTab==='videos'"><span class="tab-icon">🎬</span> Vidéos</button>
-  </div>
-  <div class="mediatheque-tabs-desc">
-    <div *ngIf="selectedTab==='events'">Toutes les activités et événements marquants de l’OMA.</div>
-    <div *ngIf="selectedTab==='photos'">Galerie photo des projets, événements et vie de l’Ordre.</div>
-    <div *ngIf="selectedTab==='videos'">Vidéos, interviews et reportages sur l’architecture.</div>
-  </div>
-
-  <!-- ACTIVITÉS / TIMELINE -->
-  <section *ngIf="selectedTab==='events'" class="mediatheque-timeline">
-    <div *ngFor="let ev of activities; let i = index" class="timeline-event" [class.alt]="i % 2 !== 0">
-      <div class="timeline-card">
-        <div class="timeline-date"><span class="timeline-date-icon">📅</span> {{ ev.date }}</div>
-        <h3 class="timeline-title">{{ ev.title }}</h3>
-        <img *ngIf="ev.cover" [src]="ev.cover" alt="{{ ev.title }}">
-        <p class="timeline-desc">{{ ev.description }}</p>
-      </div>
-    </div>
-    <button class="see-more-btn">Voir plus d’activités</button>
-  </section>
-
-  <!-- GALERIE THÉMATIQUE -->
-  <div class="mediatheque-galerie-thematique">
-    <h3>Galerie thématique</h3>
-    <div class="galerie-tabs">
-      <button class="galerie-tab active">Projets</button>
-      <button class="galerie-tab">Événements</button>
-      <button class="galerie-tab">Vie de l’Ordre</button>
-    </div>
-    <div class="galerie-thematique-grid">
-      <div class="galerie-tile">
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Projet 1">
-        <div class="galerie-caption">Projet résidentiel Nouakchott</div>
-      </div>
-      <div class="galerie-tile">
-        <img src="https://images.unsplash.com/photo-1523413363574-c30aa1c2a516?auto=format&fit=crop&w=600&q=80" alt="Projet 2">
-        <div class="galerie-caption">Centre culturel</div>
-      </div>
-      <div class="galerie-tile">
-        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=600&q=80" alt="Projet 3">
-        <div class="galerie-caption">Bâtiment administratif</div>
-      </div>
-    </div>
-    <button class="see-more-btn">Voir plus de photos</button>
-  </div>
-
-  <!-- PHOTOS -->
-  <section *ngIf="selectedTab==='photos'" class="mediatheque-grid">
-    <ng-container *ngFor="let item of gallery">
-      <div *ngIf="item.type === 'photo'" class="media-tile" (click)="openMedia(item)">
-        <img [src]="item.thumb" [alt]="item.title">
-        <div class="caption">{{ item.title }}</div>
-      </div>
-    </ng-container>
-    <button class="see-more-btn">Voir plus de photos</button>
-  </section>
-
-  <!-- VIDÉOS -->
-  <section *ngIf="selectedTab==='videos'" class="mediatheque-grid">
-    <ng-container *ngFor="let item of gallery">
-      <div *ngIf="item.type === 'video'" class="media-tile" (click)="openMedia(item)">
-        <img [src]="item.thumb" [alt]="item.title">
-        <div class="caption">{{ item.title }}</div>
-      </div>
-    </ng-container>
-    <button class="see-more-btn">Voir plus de vidéos</button>
-  </section>
-
-  <!-- CITATION INSPIRANTE -->
-  <div class="mediatheque-quote">
-    <blockquote>« L’architecture est le jeu savant, correct et magnifique des volumes assemblés sous la lumière. »</blockquote>
-    <div class="quote-author">— Le Corbusier</div>
-  </div>
+  <img src="/assets/icon/icon%20principale%20en%20grand.png" alt="" class="section-deco-right">
 
   <!-- LIGHTBOX -->
-  <div id="media-viewer" class="media-viewer" (click)="closeViewer()"></div>
+  <div id="media-viewer" class="media-viewer" (click)="closeViewer()">
+    <button class="viewer-close" (click)="closeViewer()">×</button>
+    <button class="viewer-nav viewer-prev" (click)="prevImage(); $event.stopPropagation()" *ngIf="currentImageIndex > 0">‹</button>
+    <button class="viewer-nav viewer-next" (click)="nextImage(); $event.stopPropagation()" *ngIf="currentImageIndex < getFilteredGallery().length - 1">›</button>
+  </div>
 </section>

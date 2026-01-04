@@ -77,7 +77,9 @@ button {
 }
 
 .cta-btn {
-  margin: 1.6rem auto 0 auto
+  margin: 2rem auto 0 auto;
+  z-index: 3;
+  position: relative;
 }
 
 .hero-right {
@@ -189,24 +191,50 @@ button {
 
 /* POURQUOI UN ARCHITECTE ? */
 
+.pourquoi-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.pourquoi-header .header-main-icon {
+  width: 90px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 6px 12px rgba(122, 92, 28, 0.25));
+  transition: transform 0.3s ease;
+}
+
+.pourquoi-header .header-main-icon:hover {
+  transform: scale(1.05);
+}
+
 .pourquoi-archi-section h2 {
   color: #b66a22;
   text-align: center;
   font-size: 2.4rem;
   font-weight: 800;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.8rem;
   letter-spacing: 0.01em;
+  background: linear-gradient(45deg, #b66a22, #463420);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.pourquoi-archi-section h2::after {
-  content: "";
-  display: block;
-  margin: 1rem auto 0 auto;
-  width: 60px;
+.header-underline {
+  width: 100px;
   height: 4px;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent);
+  margin: 0 auto 1rem;
   border-radius: 2px;
-  background: linear-gradient(90deg, #b66a22 40%, #c3a35b 100%);
-  opacity: 0.8;
+}
+
+.pourquoi-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 0.5rem;
 }
 
 .pourquoi-archi-grid {
@@ -218,12 +246,41 @@ button {
 
 /* MISSION SECTION DECOR */
 
+.mission-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.mission-header .header-main-icon {
+  width: 90px;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 6px 12px rgba(122, 92, 28, 0.25));
+  transition: transform 0.3s ease;
+}
+
+.mission-header .header-main-icon:hover {
+  transform: scale(1.05);
+}
+
 .mission-archi-section h2 {
   color: #b66a22;
   text-align: center;
   font-size: 2.1rem;
   font-weight: 800;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(45deg, #b66a22, #463420);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mission-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 0.5rem;
 }
 
 .mission-deco-left,
