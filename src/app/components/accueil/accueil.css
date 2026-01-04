@@ -324,7 +324,11 @@ button {
 .pourquoi-icone img {
   width: 48px;
   height: 48px;
+  max-width: 48px;
+  max-height: 48px;
   margin-bottom: 0.7rem;
+  display: block;
+  object-fit: contain;
 }
 
 .pourquoi-card h3 {

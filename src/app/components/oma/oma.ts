@@ -15,12 +15,7 @@ export class Oma {
   constructor(private router: Router) { }
 
   // Conseil restreint — afficher uniquement ces profils
-  conseil = [
-    {
-      nom: 'Mohameden Menih TAH',
-      fonction: 'Président',
-      photo: '/assets/photo des archis 1/LES ARCHIS D1/DG ould TAH .jpg'
-    },
+  conseilBureau = [
     {
       nom: 'Mohamed El Khalil',
       fonction: 'Vice-Président',
@@ -29,12 +24,41 @@ export class Oma {
     {
       nom: 'Boubacar Sy',
       fonction: 'Secrétaire Général',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/boubacar sy.jpg'
     },
     {
       nom: 'Mohamed Ould Abdelweddoud',
       fonction: 'Trésorier',
       photo: 'assets/utilisateur.svg'
+    },
+    {
+      nom: 'Cheikh El Moustapha Ould M. Yahya',
+      fonction: 'Adjoint au Trésorier',
+      photo: '/assets/La_liste_des_archis/cheikh el moustapha ould m. yahya.jpg'
+    },
+    {
+      nom: 'Mme Fatimetou NAHOUI',
+      fonction: 'Membre Assesseur',
+      photo: '/assets/La_liste_des_archis/fatimetou.jpg'
+    },
+    {
+      nom: 'Amina LO',
+      fonction: 'Membre Assesseur',
+      photo: '/assets/La_liste_des_archis/lo amina .jpg'
+    }
+  ];
+
+  // Membres avec charges spécifiques (en bas, ligne séparée)
+  conseilCharges = [
+    {
+      nom: 'Mohamed El Mokhtar El SID',
+      fonction: 'chargé de l’Harmonisation des Livrables des Architecte',
+      photo: '/assets/La_liste_des_archis/mohamed el mokhtar el sid.jpg'
+    },
+    {
+      nom: 'Yarg Bilal ',
+      fonction: 'chargé de la Communication et des Relations avec le public.',
+      photo: '/assets/La_liste_des_archis/AR2015_046 Yarg Bilal.jpg'
     }
   ];
 
@@ -84,14 +108,14 @@ export class Oma {
   }
 
 
-navigateToHistoire() {
-this.router.navigate(['/histoire']);
-}
+  navigateToHistoire() {
+    this.router.navigate(['/histoire']);
+  }
 
 
-navigateToloi() {
-this.router.navigate(['/la-loi']);
-}
+  navigateToloi() {
+    this.router.navigate(['/la-loi']);
+  }
 
 
 }

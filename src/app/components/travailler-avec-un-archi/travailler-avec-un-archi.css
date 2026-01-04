@@ -1,257 +1,295 @@
-
-/* Use global .section-beige and .section-card utilities where possible to reduce component CSS size */
-.rubriques-section{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2.5rem;padding:2.5rem 1.5rem}
-.rubrique-card{padding-bottom:.5rem}
-
-  
-/* Section Collaborateurs */
-.collaborateurs-section {
-  background: linear-gradient(120deg, #fff 80%, #f7ecd7 100%);
-  border-radius: 24px;
-  box-shadow: 0 8px 32px rgba(122, 92, 28, 0.13), 0 2px 12px rgba(0,0,0,0.08);
-  padding: 3rem 2rem;
-  margin: 3rem auto;
-  color: var(--primary-color);
-  animation: fadeIn 1.1s;
-}
-
-.collaborateurs-header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.collaborateurs-icon {
-  font-size: 3rem;
-  color: #7a5c1c;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary-color) 40%, var(--secondary-color) 100%);
-  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  margin: 0 0 1rem 0;
+.working-section {
   position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(198, 120, 38, 0.08);
 }
 
-.collaborateurs-section h2 {
-  background: linear-gradient(90deg, var(--primary-color) 40%, var(--secondary-color) 100%);
-  font-size: 2rem;  
-  color: white;
-  content: "";
-  display: block;
-  margin: 1.1rem auto 0 auto;
+.working-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.working-header {
+  text-align: center;
+}
+
+.working-header h2 {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.working-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.header-underline {
   width: 80px;
   height: 4px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
-  opacity: 0.7;
-}
-
-.collaborateurs-subtitle {
-  font-size: 1.1rem;
-  color: #666;
-  margin: 0;
-  font-style: italic;
-}
-
-.collaborateurs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.collaborateur-card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 18px rgba(122, 92, 28, 0.10), 0 1.5px 6px rgba(0,0,0,0.04);
-  padding: 2rem 1.5rem;
-  transition: transform 0.22s cubic-bezier(.4,2,.6,1), box-shadow 0.22s;
-  animation: fadeInUp 0.8s;
-  position: relative;
-  overflow: hidden;
-}
-
-.collaborateur-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
-}
-
-.collaborateur-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(195,163,91,0.20), 0 4px 16px rgba(0,0,0,0.12);
-}
-
-.collaborateur-icon {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-.collaborateur-emoji {
-  font-size: 3rem;
-  display: block;
+  background: linear-gradient(90deg, var(--primary-color) 40%, var(--secondary-color) 100%);
   margin: 0 auto;
+  border-radius: 2px;
+  opacity: 0.8;
 }
 
-.collaborateur-content h3 {
-  color: #7a5c1c;
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-  text-align: center;
-  letter-spacing: 0.01em;
+/* Main Header Icon */
+.header-main-icon {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 6px rgba(122, 92, 28, 0.2));
 }
 
-.collaborateur-description {
-  color: #555;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin: 0 0 1.5rem 0;
-  text-align: center;
-}
-
-.collaborateur-expertise {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.expertise-tag {
-  background: linear-gradient(90deg, #7a5c1c 40%, #c3a35b 100%);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  transition: transform 0.2s ease;
-}
-
-.expertise-tag:hover {
-  transform: scale(1.05);
-}
-
-.collaborateurs-conclusion {
-  background: #e8f4fd;
-  border-radius: 16px;
+/* Cards Generic */
+.working-card {
+  background: #ffffff;
+  border-radius: 18px;
   padding: 2rem;
+  box-shadow: 0 4px 18px rgba(122, 92, 28, 0.06);
+  border: 1px solid rgba(198, 120, 38, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.working-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(122, 92, 28, 0.12);
+}
+
+/* Navigation Grid */
+.rubriques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.nav-card {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.card-icon-small {
+  width: 50px;
+  height: 50px;
+  background: #fdf8f0;
+  border-radius: 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-card:hover .card-icon-small {
+  transform: scale(1.1);
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(195, 163, 91, 0.15);
+}
+
+.card-icon-small img {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 2px 3px rgba(195, 163, 91, 0.2));
+}
+
+.nav-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.nav-card h3 a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.2s;
+}
+
+.nav-card:hover h3 a {
+  color: var(--secondary-color);
+}
+
+.nav-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+  flex-grow: 1;
+}
+
+.card-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: gap 0.2s;
+}
+
+.card-link:hover {
+  gap: 0.6rem;
+}
+
+/* Collaborators Wrapper */
+.collaborators-wrapper {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(253, 248, 240, 0.7) 100%);
+  border-radius: 24px;
+  padding: 2.5rem;
+  border: 1px solid rgba(198, 120, 38, 0.05);
+}
+
+.collaborators-header-internal {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.collaborators-header-internal h3 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+/* Main Icon in Header */
+.collab-main-icon {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 6px rgba(122, 92, 28, 0.2));
+}
+
+.collaborators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.collab-card {
+  align-items: center;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.card-main-icon-wrapper {
+  margin-bottom: 0.5rem;
+}
+
+.card-main-icon-wrapper img {
+  width: 50px;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(122, 92, 28, 0.15));
+  transition: transform 0.3s ease;
+}
+
+.collab-card:hover .card-main-icon-wrapper img {
+  transform: scale(1.1);
+}
+
+.collab-icon-img {
+  width: 80px;
+  height: 80px;
+  background: #fdf8f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.collab-card:hover .collab-icon-img {
+  transform: scale(1.1) rotate(5deg);
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(195, 163, 91, 0.15);
+}
+
+.collab-icon-img img {
+  width: 40px;
+  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 2px 4px rgba(195, 163, 91, 0.2));
+}
+
+.collab-card h4 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.collab-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  background: rgba(195, 163, 91, 0.1);
+  color: var(--primary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.collab-conclusion {
+  margin-top: 3rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
-  color: #1e3a8a;
-  margin-top: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
   text-align: center;
 }
 
-.collaborateurs-conclusion-icon {
-  font-size: 2rem;
-  flex-shrink: 0;
+.collab-conclusion .icon {
+  font-size: 1.8rem;
 }
 
-.collaborateurs-conclusion p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.collab-conclusion p {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #444;
   margin: 0;
-  font-weight: 500;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-  .collaborateurs-section {
-    padding: 2rem 1.5rem;
-    margin: 2rem auto;
-  }
-  
-  .collaborateurs-section h2 {
+@media (max-width: 768px) {
+  .working-header h2 {
     font-size: 1.8rem;
   }
-  
-  .collaborateurs-subtitle {
-    font-size: 1rem;
-  }
-  
-  .collaborateurs-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .collaborateur-card {
-    padding: 1.5rem 1.2rem;
-  }
-  
-  .collaborateur-content h3 {
-    font-size: 1.2rem;
-  }
-  
-  .collaborateur-description {
-    font-size: 0.95rem;
-  }
-}
 
-@media (max-width: 600px) {
-  .collaborateurs-section {
+  .collaborators-wrapper {
     padding: 1.5rem 1rem;
-    margin: 1.5rem auto;
-    border-radius: 16px;
   }
-  
-  .collaborateurs-section h2 {
-    font-size: 1.5rem;
-  }
-  
-  .collaborateurs-icon {
-    font-size: 2.5rem;
-  }
-  
-  .collaborateur-card {
-    padding: 1.2rem 1rem;
-  }
-  
-  .collaborateur-emoji {
-    font-size: 2.5rem;
-  }
-  
-  .collaborateur-content h3 {
-    font-size: 1.1rem;
-  }
-  
-  .collaborateur-description {
-    font-size: 0.9rem;
-  }
-  
-  .expertise-tag {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
-  }
-  
-  .collaborateurs-conclusion {
-    padding: 1.5rem;
+
+  .collab-conclusion {
     flex-direction: column;
   }
-  
-  .collaborateurs-conclusion p {
-    font-size: 1rem;
-  }
 }
-  

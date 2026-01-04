@@ -1,18 +1,31 @@
-<section class="equipe-section">
-    <h2>les membres de Ordre mauritanien des architectes</h2>
+<section class="section-beige equipe-section-wrapper">
+  <img src="/assets/icon/Gauche.png" alt="" class="section-deco-left">
+
+  <div class="equipe-container">
+    <div class="equipe-header">
+      <img src="assets/icon/icon principale.png" alt="OMA Icon" class="header-main-icon">
+      <h2>Membres de L'Ordre Mauritanien des Architectes</h2>
+      <div class="header-underline"></div>
+      <p class="equipe-subtitle">Annuaire officiel des professionnels agréés</p>
+    </div>
+
+    <!-- Grid Container -->
     <div class="equipe-grid">
       <div class="equipe-card" *ngFor="let membre of membres">
         <div class="image-wrapper">
-          <img [src]="getFallbackSrc(membre)" [srcset]="getSrcset(membre)" sizes="(max-width:600px) 100vw, 300px" (error)="onPhotoError($event, membre)" alt="{{membre.nom}}" loading="lazy" decoding="async">
-            <div class="image-caption"><span class="image-name">{{membre.nom}}</span></div>
-            <div class="equipe-overlay">
-              <p><strong>Matricule :</strong> <span class="val">{{membre.matricule}}</span></p>
-              <p><strong>Téléphone :</strong> <span class="val">{{membre.telephone}}</span></p>
-              <p><strong>Email :</strong> <span class="val">{{membre.email}}</span></p>
-              <p><strong>Structure :</strong> <span class="val">{{membre.structure}}</span></p>
-            </div>
+          <img [src]="getFallbackSrc(membre)" [srcset]="getSrcset(membre)" sizes="(max-width:600px) 100vw, 300px"
+            (error)="onPhotoError($event, membre)" alt="{{membre.nom}}" loading="lazy" decoding="async">
+          <div class="image-caption"><span class="image-name">{{membre.nom}}</span></div>
+          <div class="equipe-overlay">
+            <p><strong>Matricule :</strong> <span class="val">{{membre.matricule}}</span></p>
+            <p><strong>Téléphone :</strong> <span class="val">{{membre.telephone}}</span></p>
+            <p><strong>Email :</strong> <span class="val">{{membre.email}}</span></p>
+            <p><strong>Structure :</strong> <span class="val">{{membre.structure}}</span></p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+
+  <img src="/assets/icon/icon%20principale%20en%20grand.png" alt="" class="section-deco-right">
+</section>

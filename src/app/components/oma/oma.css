@@ -1,45 +1,108 @@
-/* Rely on global typography, colors and heading decorations in src/styles.css */
-.oma-root {
-  min-height: 100vh
+/* Rubriques Section */
+.rubriques-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.rubrique-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 4px 18px rgba(122, 92, 28, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  border: 1px solid rgba(195, 163, 91, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.rubrique-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(195, 163, 91, 0.15);
+  background: linear-gradient(135deg, #fff 0%, #fdf8f0 100%);
+  border-color: rgba(195, 163, 91, 0.3);
+}
+
+.rubrique-icon {
+  margin-bottom: 1.2rem;
+  width: 64px;
+  height: 64px;
+  background: #fdf8f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.rubrique-card:hover .rubrique-icon {
+  transform: scale(1.1) rotate(5deg);
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(195, 163, 91, 0.15);
+}
+
+.rubrique-icon img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 4px rgba(195, 163, 91, 0.2));
+}
+
+.rubrique-title {
+  margin-bottom: 1rem;
 }
 
 .rubrique-title a {
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: 700;
-  transition: color 0.18s, text-decoration 0.18s;
-  position: relative;
-}
-
-.rubrique-title a::after {
-  content: "";
-  display: block;
-  width: 0;
-  height: 2px;
-  background: var(--secondary-color);
-  transition: width 0.3s;
-  position: absolute;
-  left: 0;
-  bottom: -2px;
+  font-weight: 800;
+  font-size: 1.35rem;
+  transition: color 0.18s;
+  letter-spacing: -0.01em;
 }
 
 .rubrique-title a:hover {
-  color: var(--secondary-color);
-  text-decoration: underline;
-}
-
-.rubrique-title a:hover::after {
-  width: 100%;
+  color: #a88448;
+  /* Darker gold */
+  text-decoration: none;
 }
 
 .rubrique-content {
-  padding: 1.1rem 1.2rem 1.5rem 1.2rem;
-  font-size: 1.04rem;
-  color: #333;
+  font-size: 1.05rem;
+  color: #555;
   line-height: 1.6;
-  text-align: center;
-  background: none;
-  animation: fadeInUp 1.2s;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.rubrique-link {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.2s ease, color 0.2s ease;
+}
+
+.rubrique-link .arrow {
+  transition: transform 0.2s ease;
+}
+
+.rubrique-link:hover {
+  color: var(--secondary-color);
+  gap: 0.8rem;
+}
+
+.rubrique-link:hover .arrow {
+  transform: translateX(2px);
 }
 
 .directeur-section,

@@ -1,32 +1,40 @@
 <section class="rubriques-section">
   <div class="rubrique-card">
+    <div class="rubrique-icon">
+      <img src="https://img.icons8.com/ios-filled/50/7a5c1c/museum.png" alt="Histoire">
+    </div>
     <div class="rubrique-title"> <a href="/histoire">Histoire de l'Ordre</a></div>
     <div class="rubrique-content">
       L'Ordre Mauritanien des Architectes a été créé pour encadrer la profession, valoriser le métier d'architecte et
       garantir la qualité de l'environnement bâti. Depuis sa création, il joue un rôle central dans l'organisation, la
       formation et la reconnaissance des architectes en Mauritanie.
     </div>
+    <a href="/histoire" class="rubrique-link">En savoir plus <span class="arrow">→</span></a>
   </div>
-  <div class="rubrique-card">
 
+  <div class="rubrique-card">
+    <div class="rubrique-icon">
+      <img src="https://img.icons8.com/ios-filled/50/7a5c1c/law.png" alt="Loi">
+    </div>
     <div class="rubrique-title"> <a href="/la-loi">La loi de 2009</a></div>
     <div class="rubrique-content">
       La loi n°2007-009 relative à la réglementation de la profession d'architecte en Mauritanie définit les conditions
       d'exercice, les droits et devoirs des architectes ainsi que le rôle de l'Ordre dans la supervision et le respect
       de la déontologie.
     </div>
-
+    <a href="/la-loi" class="rubrique-link">En savoir plus <span class="arrow">→</span></a>
   </div>
+
   <div class="rubrique-card">
-
-    <div class="rubrique-title"> <a href="/reglement-interieur"> Règlement intérieur de l'Ordre</a></div>
-    <div class="rubrique-content">
-      L`ordre des architectes exerce ses attributions par trois organes : - le conseil de l`ordre - le conseil de
-      discipline - la chambre de discipline
-      Définis respectivement par les Articles 26, 27, 28, 29, 30, 31, 32, 33, 34,35 et 36 de la loi 2009-028 du
-      13 avril 2009
+    <div class="rubrique-icon">
+      <img src="https://img.icons8.com/ios-filled/50/7a5c1c/rules.png" alt="Règlement">
     </div>
-
+    <div class="rubrique-title"> <a href="/reglement-interieur">Règlement intérieur</a></div>
+    <div class="rubrique-content">
+      L'ordre des architectes exerce ses attributions par trois organes : le conseil de l'ordre, le conseil de
+      discipline et la chambre de discipline. Définis par les Articles 26 à 36 de la loi 2009-028.
+    </div>
+    <a href="/reglement-interieur" class="rubrique-link">En savoir plus <span class="arrow">→</span></a>
   </div>
 </section>
 
@@ -60,7 +68,17 @@
 <section class="equipe-section section organigramme-executif">
   <h2>MEMBRES DU CONSEIL</h2>
   <div class="orga-row">
-    <div class="orga-card" *ngFor="let membre of conseil">
+    <div class="orga-card" *ngFor="let membre of conseilBureau">
+      <img [src]="getFallbackSrc(membre)" [srcset]="getSrcset(membre)" sizes="(max-width:600px) 100vw, 300px"
+        (error)="onImageError($event, membre)" alt="{{membre.nom}}" loading="lazy" decoding="async">
+      <div class="orga-nom">{{membre.nom}}</div>
+      <div class="orga-fonction">{{membre.fonction}}</div>
+    </div>
+  </div>
+
+  <!-- Membres charges spécifiques sur une nouvelle ligne -->
+  <div class="orga-row orga-charges">
+    <div class="orga-card" *ngFor="let membre of conseilCharges">
       <img [src]="getFallbackSrc(membre)" [srcset]="getSrcset(membre)" sizes="(max-width:600px) 100vw, 300px"
         (error)="onImageError($event, membre)" alt="{{membre.nom}}" loading="lazy" decoding="async">
       <div class="orga-nom">{{membre.nom}}</div>
