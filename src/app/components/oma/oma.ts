@@ -53,7 +53,7 @@ export class Oma {
     {
       nom: 'Mohamed El Mokhtar El SID',
       fonction: 'chargé de l’Harmonisation des Livrables des Architecte',
-      photo: '/assets/La_liste_des_archis/mohamed el mokhtar el sid.jpg'
+      photo: '/assets/La_liste_des_archis/Med Moktar El sid.jpg'
     },
     {
       nom: 'Yarg Bilal ',

@@ -16,22 +16,7 @@ export class ListeArchitecte {
       structure: 'CEAE - Cabinet d\'étude d\'architecture et d\'ingénierie',
       photo: 'assets/La_liste_des_archis/Med El Mokhtar ROUEIHA.jpg'
     },
-    {
-      matricule: 'AR1974/002',
-      nom: 'Boubacar Messaoud',
-      telephone: '45254602',
-      email: 'boubacar_messoud@yahoo.fr',
-      structure: 'CAA - Cabinet d\'Architectes Associes',
-      photo: ''
-    },
-    {
-      matricule: 'AR1978/003',
-      nom: 'Mme Diabira Maryannick',
-      telephone: '36302689',
-      email: 'diabirafmi@yahoo.fr',
-      structure: 'CEAE - Cabinet d\'étude d\'architecture et d\'ingénierie',
-      photo: 'assets/utilisateur.svg'
-    },
+   
     {
       matricule: 'AR1984/004',
       nom: 'Bintou Kaba',
@@ -176,12 +161,36 @@ export class ListeArchitecte {
       photo: 'assets/La_liste_des_archis/al hacen Nah.jpg'
     },
     {
+      matricule: 'AR2003/022',
+      nom: 'Yahevdou Ould Cherif',
+      telephone: '46801614',
+      email: 'Yahfd5@gmail.com',
+      structure: 'Ministère de l\'Habitat MHUAT',
+      photo: 'assets/La_liste_des_archis/yahevdou ould cherif.jpg'
+    },
+    {
       matricule: 'AR2022/054',
       nom: 'Ahmed Mohamed Mahmoud',
       telephone: '44959599',
       email: 'contact@archizone.org',
       structure: 'ARCHI-ZONE',
       photo: 'assets/La_liste_des_archis/AR2022_054 Ahmed Mohamed Mahmoud.jpg'
+    },
+    {
+      matricule: 'AR2015/045',
+      nom: 'Sawdatou Hamedine Kane',
+      telephone: '36861189',
+      email: 'Kanesawdatou0@gmail.com',
+      structure: 'Mahde Design',
+      photo: 'assets/La_liste_des_archis/sawdatou hamedine kane.jpg'
+    },
+    {
+      matricule: 'AR1996/016',
+      nom: 'Souleymane Boubacar Dramane',
+      telephone: '44481705',
+      email: 'souleysod@gmail.com',
+      structure: 'Ministère de l\'Equipement et des Transports (MET)',
+      photo: 'assets/La_liste_des_archis/11.jpg'
     },
     {
       matricule: 'AR1992/008',
@@ -192,28 +201,12 @@ export class ListeArchitecte {
       photo: 'assets/La_liste_des_archis/Cheikh Ahmedou Ould Mohamed Mokhtar.jpg'
     },
     {
-      matricule: 'AR1992/009',
-      nom: 'Lemat Hamadi El Vadel',
-      telephone: '36309017',
-      email: 'Lematt1987@yahoo.fr',
+      matricule: 'AR2023/066',
+      nom: 'Khadijetou EHDHANE',
+      telephone: '32406310',
+      email: 'khadijetou@example.com',
       structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/La_liste_des_archis/utilisateur.svg'
-    },
-    {
-      matricule: 'AR1993/010',
-      nom: 'Sidi Mohamed O. Med Saleh dit Hafed',
-      telephone: '36301289',
-      email: 'betaconsulte@yahoo.fr',
-      structure: 'Betaconsult',
-      photo: 'assets/La_liste_des_archis/utilisateur.svg'
-    },
-    {
-      matricule: 'AR1994/011',
-      nom: 'Abdellahi Ould Ahmed Baba',
-      telephone: '46457473',
-      email: 'Abdellahiaad@yahoo.fr',
-      structure: 'AAD',
-      photo: 'assets/La_liste_des_archis/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/01.jpg'
     },
     {
       matricule: 'AR1994/012',
@@ -221,25 +214,7 @@ export class ListeArchitecte {
       telephone: '47188801',
       email: 'baidrissaoumar@gmail.com',
       structure: 'ARCHIFORM',
-      photo: 'assets/La_liste_des_archis/utilisateur.svg'
-    },
-    {
-      matricule: 'AR1995/013',
-      nom: 'Oumeir Hossien HOUESSOU',
-      telephone: '46440331',
-      email: 'omerarchitecte@gmail.com',
-      structure: 'CREA Aménagement',
-      photo: 'assets/utilisateur.svg'
-    },
-
-
-    {
-      matricule: 'AR1996/016',
-      nom: 'Souleymane Boubacar Dramane',
-      telephone: '44481705',
-      email: 'souleysod@gmail.com',
-      structure: 'Ministère de l\'Equipement et des Transports (MET)',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/ba idrissa.jpg'
     },
     {
       matricule: 'AR1997/017',
@@ -247,15 +222,67 @@ export class ListeArchitecte {
       telephone: '49858502',
       email: 'elsidarchitecte@gmail.com',
       structure: 'E&T architectes',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/Med Moktar El sid.jpg'
     },
+    {
+      matricule: 'AR1974/002',
+      nom: 'Boubacar Messaoud',
+      telephone: '45254602',
+      email: 'boubacar_messoud@yahoo.fr',
+      structure: 'CAA - Cabinet d\'Architectes Associes',
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'      
+    },
+    {
+      matricule: 'AR1978/003',
+      nom: 'Mme Diabira Maryannick',
+      telephone: '36302689',
+      email: 'diabirafmi@yahoo.fr',
+      structure: 'CEAE - Cabinet d\'étude d\'architecture et d\'ingénierie',
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
+    },
+    {
+      matricule: 'AR1992/009',
+      nom: 'Lemat Hamadi El Vadel',
+      telephone: '36309017',
+      email: 'Lematt1987@yahoo.fr',
+      structure: 'Ministère de l\'Habitat MHUAT',
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
+    },
+    {
+      matricule: 'AR1993/010',
+      nom: 'Sidi Mohamed O. Med Saleh dit Hafed',
+      telephone: '36301289',
+      email: 'betaconsulte@yahoo.fr',
+      structure: 'Betaconsult',
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
+    },
+    {
+      matricule: 'AR1994/011',
+      nom: 'Abdellahi Ould Ahmed Baba',
+      telephone: '46457473',
+      email: 'Abdellahiaad@yahoo.fr',
+      structure: 'AAD',
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
+    },
+   
+    {
+      matricule: 'AR1995/013',
+      nom: 'Oumeir Hossien HOUESSOU',
+      telephone: '46440331',
+      email: 'omerarchitecte@gmail.com',
+      structure: 'CREA Aménagement',
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
+    },
+
+
+   
     {
       matricule: 'AR2000/019',
       nom: 'Aziz Ould Med Abdellahi',
       telephone: '42922682',
       email: 'aziz@example.com',
       structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
     {
       matricule: 'AR2001/020',
@@ -263,17 +290,10 @@ export class ListeArchitecte {
       telephone: '0033 622453288',
       email: 'mohamedelhassene.bou@gmail.com',
       structure: 'Baudin Châteauneuf - France',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'  
     },
 
-    {
-      matricule: 'AR2003/022',
-      nom: 'Yahevdou Ould Cherif',
-      telephone: '46801614',
-      email: 'Yahfd5@gmail.com',
-      structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/utilisateur.svg'
-    },
+   
 
     {
       matricule: 'AR2005/024',
@@ -281,23 +301,16 @@ export class ListeArchitecte {
       telephone: '44685541',
       email: 'moujtaba_w@yahoo.fr',
       structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
-    {
-      matricule: 'AR2005/025',
-      nom: 'Med Moktar ROUEIHA',
-      telephone: '22379905',
-      email: 'dg@caupid.com',
-      structure: 'CAUPID',
-      photo: 'assets/La_liste_des_archis/Med_Moktar_ROUEIHA.jpg'
-    },
+   
     {
       matricule: 'AR2007/026',
       nom: 'El Mechri Ould Bedde',
       telephone: '36317402',
       email: 'elmechry@yahoo.com',
       structure: 'Bureau africain des consultations et des études techniques',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
     {
       matricule: 'AR2007/027',
@@ -305,7 +318,7 @@ export class ListeArchitecte {
       telephone: '00974 30487999',
       email: 'habib_mr2002@yahoo.fr',
       structure: 'Parsons International - Alabama - United States',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
     {
       matricule: 'AR2009/028',
@@ -313,8 +326,9 @@ export class ListeArchitecte {
       telephone: '44899676',
       email: 'ahmedarchitecte@yahoo.fr',
       structure: 'STYLE Architecte',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'  
     },
+   
 
     {
       matricule: 'AR2010/030',
@@ -322,7 +336,7 @@ export class ListeArchitecte {
       telephone: '47167891',
       email: 'ismaelchouaib@gmail.com',
       structure: '2A-Architects',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
 
     {
@@ -331,7 +345,7 @@ export class ListeArchitecte {
       telephone: '20137219',
       email: 'snacoulialy@hotmail.fr',
       structure: 'BBI',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'  
     },
     {
       matricule: 'AR2012/033',
@@ -339,7 +353,7 @@ export class ListeArchitecte {
       telephone: '26302088',
       email: 'haballasidi@gmail.com',
       structure: 'MIMAR ÉTUDES ET CONSULTATIONS',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
 
 
@@ -350,7 +364,7 @@ export class ListeArchitecte {
       telephone: '41443130',
       email: 'arktek-arch-ing@outlook.com',
       structure: 'Arktek',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
     {
       matricule: 'AR2014/038',
@@ -358,7 +372,7 @@ export class ListeArchitecte {
       telephone: '26210112',
       email: 'khalil9198@gmail.com',
       structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
 
     {
@@ -367,7 +381,7 @@ export class ListeArchitecte {
       telephone: '44224043',
       email: 'm.khadija@gmail.com',
       structure: 'Najah',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil femme.jpg'
     },
     {
       matricule: 'AR2014/041',
@@ -375,7 +389,7 @@ export class ListeArchitecte {
       telephone: '36106909',
       email: 'Chemed7@hotmail.com',
       structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
     {
       matricule: 'AR2015/042',
@@ -383,7 +397,7 @@ export class ListeArchitecte {
       telephone: '36460001',
       email: 'Ah.ragel2002@gmail.com',
       structure: 'MIEMAR',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
     {
       matricule: 'AR2015/043',
@@ -391,7 +405,7 @@ export class ListeArchitecte {
       telephone: '36330402',
       email: 'mettouhamdi04@gmail.com',
       structure: 'CREA',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil femme.jpg'
     },
     {
       matricule: 'AR2015/044',
@@ -399,16 +413,9 @@ export class ListeArchitecte {
       telephone: '26448017',
       email: 'kelthomsser@yahoo.com',
       structure: 'Kelthom Architect Design intérieur',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil femme.jpg'
     },
-    {
-      matricule: 'AR2015/045',
-      nom: 'Sawdatou Hamedine Kane',
-      telephone: '36861189',
-      email: 'Kanesawdatou0@gmail.com',
-      structure: 'Mahde Design',
-      photo: 'assets/utilisateur.svg'
-    },
+   
 
     {
       matricule: 'AR2015/047',
@@ -416,7 +423,7 @@ export class ListeArchitecte {
       telephone: '0049 176 30391299',
       email: 'tabidine@graphiq.archi',
       structure: 'GRAPHIQ',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
 
 
@@ -426,7 +433,7 @@ export class ListeArchitecte {
       telephone: '36046161',
       email: 'Imk.architecture.design@gmail.com',
       structure: 'IMK',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
     {
       matricule: 'AR2017/051',
@@ -434,7 +441,7 @@ export class ListeArchitecte {
       telephone: '27753289',
       email: 'gailanibarikalla@gmail.com',
       structure: 'Gailani Barikalla',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
 
 
@@ -444,28 +451,21 @@ export class ListeArchitecte {
       telephone: '+(222) 26966920',
       email: 'Sambeitsalem@gmail.com',
       structure: 'Warda Construction',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     },
-    {
-      matricule: 'AR2023/066',
-      nom: 'Khadijetou EHDHANE',
-      telephone: '32406310',
-      email: 'khadijetou@example.com',
-      structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/utilisateur.svg'
-    },
+   
     {
       matricule: 'AR2021/057',
       nom: 'Ahmed LAKHAL',
       telephone: 'Non spécifié',
       email: 'archi.ahmed10@gmail.com',
       structure: 'Salarié',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
     }
   ];
 
   getNamePhoto(nom: string) {
-    if (!nom) return 'assets/utilisateur.svg';
+    if (!nom) return 'assets/La_liste_des_archis/profil homme.jpg';
     // Use the original name spacing/characters to match actual filenames in assets
     const safe = nom.replace(/\s+/g, ' ').trim();
     return encodeURI(`assets/La_liste_des_archis/${safe}.jpg`);
@@ -482,7 +482,7 @@ export class ListeArchitecte {
   // Return fallback src (prefer webp 640 if exists after generation, otherwise original)
   getFallbackSrc(membre: any) {
     const base = this.getBaseAssetPath(membre);
-    if (!base) return 'assets/utilisateur.svg';
+    if (!base) return 'assets/La_liste_des_archis/profil homme.jpg';
     return `${base}-640.webp`;
   }
 
@@ -507,7 +507,7 @@ export class ListeArchitecte {
       return;
     }
     // If initial was generated name or second attempt failed, use placeholder
-    img.src = 'assets/utilisateur.svg';
+    img.src = "assets/La_liste_des_archis/profil homme.jpg";
   }
 
   normalizePath(path: string) {
