@@ -109,6 +109,81 @@
   animation: fadeInUp 1s ease-out 0.2s backwards;
 }
 
+/* Grands écrans */
+@media (min-width: 1400px) {
+  .histoire-container {
+    max-width: 1100px;
+    padding: 0 2rem;
+  }
+
+  .histoire-header h2 {
+    font-size: 2.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .histoire-content-card {
+    padding: 4rem 3rem;
+  }
+
+  .card-icon img {
+    width: 100px;
+    margin-bottom: 2.5rem;
+  }
+
+  .card-text p {
+    font-size: 1.2rem;
+  }
+
+  .card-text .lead-text {
+    font-size: 1.4rem;
+  }
+
+  .card-footer {
+    padding: 2rem;
+  }
+
+  .card-footer p {
+    font-size: 1.15rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .histoire-container {
+    max-width: 1300px;
+    padding: 0 2.5rem;
+  }
+
+  .histoire-header h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .histoire-content-card {
+    padding: 5rem 4rem;
+  }
+
+  .card-icon img {
+    width: 120px;
+    margin-bottom: 3rem;
+  }
+
+  .card-text p {
+    font-size: 1.3rem;
+  }
+
+  .card-text .lead-text {
+    font-size: 1.5rem;
+  }
+
+  .card-footer {
+    padding: 2.5rem;
+  }
+
+  .card-footer p {
+    font-size: 1.25rem;
+  }
+}
+
 @media (max-width: 900px) {
   .histoire-section {
     padding: 2rem 1rem;

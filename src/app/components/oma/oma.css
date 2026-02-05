@@ -126,6 +126,11 @@
   text-align: center;
 }
 
+.directeur-message {
+  position: relative;
+  z-index: 1;
+}
+
 .directeur-photo-center img {
   display: block;
   margin-left: auto;
@@ -298,7 +303,167 @@
   border-color: rgba(195, 163, 91, 0.4);
 }
 
-/* Responsive design amélioré */
+/* Responsive design amélioré - Grands écrans */
+@media (min-width: 1400px) {
+  .rubriques-section {
+    max-width: 1400px;
+    gap: 3rem;
+    padding: 0 2rem;
+  }
+
+  .rubrique-card {
+    padding: 2.5rem 2rem;
+  }
+
+  .rubrique-title a {
+    font-size: 1.5rem;
+  }
+
+  .rubrique-content {
+    font-size: 1.15rem;
+  }
+
+  .directeur-section {
+    max-width: 1400px;
+    padding: 3.5rem 2.5rem;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3.5rem;
+    align-items: start;
+  }
+
+  .directeur-photo-center {
+    position: sticky;
+    top: 2rem;
+  }
+
+  .directeur-photo-center img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .directeur-nom {
+    font-size: 1.8rem;
+  }
+
+  .directeur-fonction {
+    font-size: 1.1rem;
+  }
+
+  .directeur-message {
+    padding-top: 0;
+  }
+
+  .directeur-message h3 {
+    font-size: 1.6rem;
+    text-align: left;
+  }
+
+  .directeur-message h3::after {
+    margin: 0.7rem 0 0 0;
+  }
+
+  .directeur-message p {
+    font-size: 1.2rem;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .organigramme-executif {
+    max-width: 1400px;
+    padding: 3.5rem 2.5rem;
+  }
+
+  .organigramme-executif h2 {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  .orga-row {
+    gap: 3rem;
+  }
+
+  .orga-card {
+    min-width: 260px;
+    max-width: 320px;
+    padding: 2rem 1.5rem;
+  }
+
+  .orga-card img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .orga-nom {
+    font-size: 1.15rem;
+  }
+
+  .orga-fonction {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .rubriques-section {
+    max-width: 1600px;
+    gap: 3.5rem;
+  }
+
+  .directeur-section {
+    max-width: 1600px;
+    padding: 4rem 3rem;
+    grid-template-columns: 450px 1fr;
+    gap: 4.5rem;
+  }
+
+  .directeur-photo-center img {
+    width: 280px;
+    height: 280px;
+  }
+
+  .directeur-nom {
+    font-size: 2rem;
+  }
+
+  .directeur-message h3 {
+    font-size: 1.8rem;
+  }
+
+  .directeur-message p {
+    font-size: 1.3rem;
+    max-width: 100%;
+  }
+
+  .organigramme-executif {
+    max-width: 1600px;
+    padding: 4rem 3rem;
+  }
+
+  .organigramme-executif h2 {
+    font-size: 2.8rem;
+  }
+
+  .orga-card {
+    min-width: 280px;
+    max-width: 350px;
+    padding: 2.2rem 1.8rem;
+  }
+
+  .orga-card img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .orga-nom {
+    font-size: 1.25rem;
+  }
+
+  .orga-fonction {
+    font-size: 1.05rem;
+  }
+}
+
+/* Responsive design amélioré - Petits écrans */
 @media (max-width: 900px) {
 
   .rubriques-section,

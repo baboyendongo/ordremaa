@@ -342,7 +342,154 @@
   z-index: 1;
 }
 
-/* Responsive */
+/* Responsive - Grands écrans */
+@media (min-width: 1400px) {
+  .faq-section {
+    padding: 5rem 2rem;
+  }
+
+  .faq-container {
+    max-width: 1200px;
+    gap: 4rem;
+  }
+
+  .faq-header h2 {
+    font-size: 2.8rem;
+  }
+
+  .faq-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .faq-intro-card {
+    max-width: 900px;
+    padding: 3rem;
+  }
+
+  .intro-text {
+    font-size: 1.35rem;
+  }
+
+  .filter-btn {
+    padding: 0.9rem 2rem;
+    font-size: 1.05rem;
+  }
+
+  .faq-question {
+    padding: 1.8rem 2.2rem;
+  }
+
+  .faq-q-text {
+    font-size: 1.25rem;
+  }
+
+  .faq-q-number {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 1rem;
+  }
+
+  .faq-answer.open {
+    padding: 0 2.2rem 2.2rem 6rem;
+  }
+
+  .faq-answer-content p {
+    font-size: 1.15rem;
+  }
+
+  .faq-contact {
+    padding: 3.5rem 2.5rem;
+  }
+
+  .faq-contact h3 {
+    font-size: 2rem;
+  }
+
+  .faq-contact p {
+    font-size: 1.2rem;
+  }
+
+  .faq-contact-btn {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .faq-section {
+    padding: 6rem 2.5rem;
+  }
+
+  .faq-container {
+    max-width: 1400px;
+    gap: 5rem;
+  }
+
+  .faq-header h2 {
+    font-size: 3.2rem;
+  }
+
+  .faq-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .faq-intro-card {
+    max-width: 1000px;
+    padding: 3.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.45rem;
+  }
+
+  .filter-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+  }
+
+  .faq-question {
+    padding: 2rem 2.5rem;
+  }
+
+  .faq-q-text {
+    font-size: 1.35rem;
+  }
+
+  .faq-q-number {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 1.1rem;
+  }
+
+  .faq-answer.open {
+    padding: 0 2.5rem 2.5rem 6.5rem;
+  }
+
+  .faq-answer-content p {
+    font-size: 1.25rem;
+  }
+
+  .faq-contact {
+    padding: 4rem 3rem;
+  }
+
+  .faq-contact h3 {
+    font-size: 2.2rem;
+  }
+
+  .faq-contact p {
+    font-size: 1.3rem;
+  }
+
+  .faq-contact-btn {
+    padding: 1.3rem 3.5rem;
+    font-size: 1.25rem;
+  }
+}
+
+/* Responsive - Petits écrans */
 @media (max-width: 768px) {
   .faq-section {
     padding: 2rem 0.5rem;

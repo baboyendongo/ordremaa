@@ -9,9 +9,6 @@ import { Router } from '@angular/router';
 })
 export class Oma {
 
-
-
-
   constructor(private router: Router) { }
 
   // Conseil restreint — afficher uniquement ces profils
@@ -29,7 +26,7 @@ export class Oma {
     {
       nom: 'Mohamed Ould Abdelweddoud',
       fonction: 'Trésorier',
-      photo: 'assets/utilisateur.svg'
+      photo: 'assets/La_liste_des_archis/10.jpg'
     },
     {
       nom: 'Cheikh El Moustapha Ould M. Yahya',

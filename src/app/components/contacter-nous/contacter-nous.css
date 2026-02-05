@@ -373,7 +373,162 @@
   z-index: 1;
 }
 
-/* Responsive */
+/* Responsive - Grands écrans */
+@media (min-width: 1400px) {
+  .contact-section {
+    padding: 5rem 2rem;
+  }
+
+  .contact-container {
+    max-width: 1400px;
+    gap: 4rem;
+  }
+
+  .contact-header h2 {
+    font-size: 2.8rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .contact-intro-card {
+    max-width: 900px;
+    padding: 3rem;
+  }
+
+  .intro-text {
+    font-size: 1.35rem;
+  }
+
+  .contact-content {
+    gap: 4rem;
+  }
+
+  .contact-form-wrapper,
+  .contact-infos {
+    padding: 3rem;
+  }
+
+  .form-header h3 {
+    font-size: 2rem;
+  }
+
+  .form-header p {
+    font-size: 1.1rem;
+  }
+
+  .form-group label {
+    font-size: 1.1rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 1.1rem;
+    padding: 1.2rem 1.5rem;
+  }
+
+  .contact-btn {
+    font-size: 1.2rem;
+    padding: 1.3rem 3rem;
+  }
+
+  .contact-infos h3 {
+    font-size: 2rem;
+  }
+
+  .contact-description {
+    font-size: 1.1rem;
+  }
+
+  .contact-info-content h4 {
+    font-size: 1.2rem;
+  }
+
+  .contact-info-content p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 1800px) {
+  .contact-section {
+    padding: 6rem 2.5rem;
+  }
+
+  .contact-container {
+    max-width: 1600px;
+    gap: 5rem;
+  }
+
+  .contact-header h2 {
+    font-size: 3.2rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .contact-intro-card {
+    max-width: 1000px;
+    padding: 3.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.45rem;
+  }
+
+  .contact-content {
+    gap: 5rem;
+  }
+
+  .contact-form-wrapper,
+  .contact-infos {
+    padding: 3.5rem;
+  }
+
+  .form-header h3 {
+    font-size: 2.2rem;
+  }
+
+  .form-header p {
+    font-size: 1.15rem;
+  }
+
+  .form-group label {
+    font-size: 1.15rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 1.15rem;
+    padding: 1.3rem 1.8rem;
+  }
+
+  .contact-btn {
+    font-size: 1.25rem;
+    padding: 1.4rem 3.5rem;
+  }
+
+  .contact-infos h3 {
+    font-size: 2.2rem;
+  }
+
+  .contact-description {
+    font-size: 1.15rem;
+  }
+
+  .contact-info-content h4 {
+    font-size: 1.3rem;
+  }
+
+  .contact-info-content p {
+    font-size: 1.15rem;
+  }
+}
+
+/* Responsive - Petits écrans */
 @media (max-width: 900px) {
   .contact-section {
     padding: 2rem 0.5rem;

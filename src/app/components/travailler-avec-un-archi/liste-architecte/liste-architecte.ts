@@ -51,7 +51,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR1996/014',
-      nom: 'Mohameden Bebeha Tah dit Menih',
+      nom: 'Mohameden Bebeha Tah',
       telephone: '20020061',
       email: 'mcbingenieries@gmail.com',
       structure: 'MCB Multidisciplinary Consulting Bureau',
@@ -200,14 +200,7 @@ export class ListeArchitecte {
       structure: 'TASMIM',
       photo: 'assets/La_liste_des_archis/Cheikh Ahmedou Ould Mohamed Mokhtar.jpg'
     },
-    {
-      matricule: 'AR2023/066',
-      nom: 'Khadijetou EHDHANE',
-      telephone: '32406310',
-      email: 'khadijetou@example.com',
-      structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/La_liste_des_archis/01.jpg'
-    },
+   
     {
       matricule: 'AR1994/012',
       nom: 'Ba idrissa',
@@ -238,7 +231,7 @@ export class ListeArchitecte {
       telephone: '36302689',
       email: 'diabirafmi@yahoo.fr',
       structure: 'CEAE - Cabinet d\'étude d\'architecture et d\'ingénierie',
-      photo: 'assets/La_liste_des_archis/profil homme.jpg'
+      photo: 'assets/La_liste_des_archis/profil femme.jpg'
     },
     {
       matricule: 'AR1992/009',
@@ -286,7 +279,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2001/020',
-      nom: 'Mohamed El Hacene BOU',
+      nom: 'Mohamed El Hacene',
       telephone: '0033 622453288',
       email: 'mohamedelhassene.bou@gmail.com',
       structure: 'Baudin Châteauneuf - France',

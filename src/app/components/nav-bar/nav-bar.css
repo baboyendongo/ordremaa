@@ -17,7 +17,7 @@
   justify-content: space-between;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: clamp(0.6rem, 2vw, 1rem) clamp(0.8rem, 3vw, 2rem);
 }
 
 .oaa-logo {
@@ -27,7 +27,7 @@
 }
 
 .oaa-logo img {
-  height: 120px;
+  height: clamp(80px, 12vw, 120px);
   width: auto;
   display: block;
   transition: filter 0.2s ease, transform 0.2s ease;
@@ -75,8 +75,7 @@
 
 .oaa-nav {
   display: flex;
-  gap: 3.5rem;
-  /* Wider spacing */
+  gap: clamp(2rem, 4vw, 3.5rem);
   flex: 1;
   justify-content: flex-end;
   align-items: center;
@@ -84,10 +83,9 @@
 
 .nav-link {
   color: #C67826;
-  /* Gold color */
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
   padding: 0.5rem 0;
   transition: all 0.3s ease;
   position: relative;
@@ -125,12 +123,11 @@
 
 @media (max-width: 900px) {
   .oaa-header-top {
-    padding: 0.8rem 1rem 0.5rem 1rem;
+    padding: clamp(0.5rem, 1.5vw, 0.8rem) clamp(0.6rem, 2vw, 1rem);
   }
 
   .oaa-logo img {
-    height: 100px;
-    /* tablet */
+    height: clamp(70px, 10vw, 100px);
   }
 
   .oaa-nav {
@@ -143,8 +140,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding-top: 5rem;
-    gap: 1rem;
+    padding-top: clamp(3rem, 15vw, 5rem);
+    gap: clamp(0.5rem, 2vw, 1rem);
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     z-index: 110;
@@ -156,8 +153,8 @@
   }
 
   .nav-link {
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    padding: clamp(0.7rem, 2vw, 1rem) clamp(1.2rem, 3vw, 2rem);
     width: 100%;
     text-align: center;
     border-bottom: 1px solid rgba(195, 163, 91, 0.1);
@@ -172,23 +169,92 @@
   }
 }
 
-@media (max-width: 600px) {
+/* Small tablets - 600px to 900px */
+@media (max-width: 900px) and (min-width: 600px) {
   .oaa-header-top {
-    padding: 0.6rem 0.8rem 0.4rem 0.8rem;
+    padding: clamp(0.6rem, 1.8vw, 0.9rem) clamp(0.8rem, 2.5vw, 1.2rem);
   }
 
   .oaa-logo img {
-    height: 100px;
-    /* mobile */
+    height: clamp(75px, 11vw, 105px);
   }
 
   .nav-link {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    padding: clamp(0.8rem, 2vw, 1rem) clamp(1.2rem, 2.5vw, 1.8rem);
+  }
+}
+
+/* Mobile phones - smaller than 600px */
+@media (max-width: 600px) {
+  .oaa-header-top {
+    padding: clamp(0.4rem, 1vw, 0.6rem) clamp(0.5rem, 1.5vw, 0.8rem);
+  }
+
+  .oaa-logo img {
+    height: clamp(60px, 15vw, 85px);
+  }
+
+  .nav-link {
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(1rem, 2vw, 1.5rem);
   }
 
   .oaa-nav {
-    padding-top: 4rem;
+    padding-top: clamp(2.5rem, 12vw, 3.5rem);
+    gap: clamp(0.3rem, 1.5vw, 0.7rem);
+  }
+
+  .oaa-burger {
+    width: clamp(35px, 8vw, 45px);
+    height: clamp(35px, 8vw, 45px);
+  }
+
+  .oaa-burger span {
+    width: clamp(15px, 4vw, 20px);
+    height: clamp(1.8px, 0.5vw, 2.5px);
+    margin: clamp(1.5px, 0.5vw, 2.5px) 0;
+  }
+}
+
+/* Grands écrans */
+@media (min-width: 1400px) {
+  .oaa-header-top {
+    max-width: 1400px;
+    padding: clamp(1rem, 2vw, 1.2rem) clamp(1.8rem, 3vw, 2.5rem) clamp(0.7rem, 1.5vw, 0.8rem) clamp(1.8rem, 3vw, 2.5rem);
+  }
+
+  .oaa-logo img {
+    height: clamp(110px, 10vw, 130px);
+  }
+
+  .nav-link {
+    font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+    padding: clamp(0.5rem, 1vw, 0.6rem) clamp(0.9rem, 1.5vw, 1.2rem);
+  }
+
+  .oaa-nav {
+    gap: clamp(3rem, 5vw, 4rem);
+  }
+}
+
+@media (min-width: 1800px) {
+  .oaa-header-top {
+    max-width: 1600px;
+    padding: clamp(1.3rem, 2.2vw, 1.5rem) clamp(2rem, 3.5vw, 3rem) clamp(0.8rem, 1.8vw, 1rem) clamp(2rem, 3.5vw, 3rem);
+  }
+
+  .oaa-logo img {
+    height: clamp(120px, 11vw, 140px);
+  }
+
+  .nav-link {
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    padding: clamp(0.6rem, 1.2vw, 0.7rem) clamp(1rem, 1.8vw, 1.5rem);
+  }
+
+  .oaa-nav {
+    gap: clamp(3.5rem, 5.5vw, 5rem);
   }
 }
 
