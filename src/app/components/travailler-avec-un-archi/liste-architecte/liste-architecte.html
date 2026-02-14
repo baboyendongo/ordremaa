@@ -15,7 +15,9 @@
         <div class="image-wrapper">
           <img [src]="getFallbackSrc(membre)" [srcset]="getSrcset(membre)" sizes="(max-width:600px) 100vw, 300px"
             (error)="onPhotoError($event, membre)" alt="{{membre.nom}}" loading="lazy" decoding="async">
-          <div class="image-caption"><span class="image-name">{{membre.nom}}</span></div>
+          <div class="image-caption">
+            <span class="image-name">{{membre.nom}}</span>
+          </div>
           <div class="equipe-overlay">
             <p><strong>Matricule :</strong> <span class="val">{{membre.matricule}}</span></p>
             <p><strong>Téléphone :</strong> <span class="val">{{membre.telephone}}</span></p>

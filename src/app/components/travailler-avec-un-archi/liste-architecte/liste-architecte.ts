@@ -8,15 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ListeArchitecte {
   membres = [
-    {
-      matricule: 'AR1978/003',
-      nom: 'Med El Mokhtar ROUEIHA',
-      telephone: '36302689',
-      email: 'diabirafmi@yahoo.fr',
-      structure: 'CEAE - Cabinet d\'étude d\'architecture et d\'ingénierie',
-      photo: 'assets/La_liste_des_archis/Med El Mokhtar ROUEIHA.jpg'
-    },
-   
+
     {
       matricule: 'AR1984/004',
       nom: 'Bintou Kaba',
@@ -27,15 +19,23 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2012/052',
-      nom: 'Boubacar Ousmane Sy',
+      nom: 'Boubacar  Sy',
       telephone: '42867044',
       email: 'kassarchitecture@icloud.com',
       structure: 'KASS ARCHITECTURE',
       photo: '/assets/La_liste_des_archis/boubacar sy.jpg'
     },
     {
+      matricule: 'AR1986/005',
+      nom: 'Sall Abderahmane',
+      telephone: '22404778',
+      email: 'moodibocarmoodi@yahoo.fr',
+      structure: 'CAA - Cabinet d\'Architectes Associes',
+      photo: 'assets/La_liste_des_archis/profil homme.jpg'
+    },
+    {
       matricule: 'AR1987/006',
-      nom: "N’diaye Mohamed EL Habib",
+      nom: "N’diaye Mohamed ",
       telephone: '46416944',
       email: 'ndiayemhcau@yahoo.fr',
       structure: 'CAU : Cabinet d\'Architecture et d\'Urbanisme',
@@ -43,7 +43,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR1988/007',
-      nom: 'Cheikhna Ould Taleb Ahmed',
+      nom: 'Cheikhna O. Taleb ',
       telephone: '46418943',
       email: 'tacheikhna@yahoo.fr',
       structure: 'G.I.B',
@@ -51,7 +51,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR1996/014',
-      nom: 'Mohameden Bebeha Tah',
+      nom: 'Mohameden  Tah',
       telephone: '20020061',
       email: 'mcbingenieries@gmail.com',
       structure: 'MCB Multidisciplinary Consulting Bureau',
@@ -99,7 +99,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2014/036',
-      nom: 'Cheikhani Mohameden Nahwi',
+      nom: 'Cheikhani Mohameden',
       telephone: '44144044',
       email: 'cheikh18@gmail.com',
       structure: 'REDWANE',
@@ -115,14 +115,14 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2001/048',
-      nom: 'Galledou cheikh Tidiane',
+      nom: 'Galledou cheikh ',
       telephone: '47728888',
       email: 'ctijane2@yahoo.fr',
       photo: '/assets/La_liste_des_archis/AR2014_038 Mohamed El Khalil Elemine.jpg'
     },
     {
       matricule: 'AR2011/031',
-      nom: 'Mohamed El Hadj Brahim',
+      nom: 'Mohamed El Hadj ',
       telephone: '46737108',
       email: 'arshymed@gmail.com',
       structure: 'ARCHI - MED',
@@ -138,7 +138,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2020/049',
-      nom: 'Hamdinou Mohamed Salem TANGI',
+      nom: 'Hamdinou Mohamed ',
       telephone: '36383798',
       email: 'Tangi@larchitecte.co',
       structure: 'L\'ARCHITECTE',
@@ -162,7 +162,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2003/022',
-      nom: 'Yahevdou Ould Cherif',
+      nom: 'Yahevdou O. Cherif',
       telephone: '46801614',
       email: 'Yahfd5@gmail.com',
       structure: 'Ministère de l\'Habitat MHUAT',
@@ -170,7 +170,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2022/054',
-      nom: 'Ahmed Mohamed Mahmoud',
+      nom: 'Ahmed Mohamed ',
       telephone: '44959599',
       email: 'contact@archizone.org',
       structure: 'ARCHI-ZONE',
@@ -178,7 +178,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2015/045',
-      nom: 'Sawdatou Hamedine Kane',
+      nom: 'Sawdatou  Kane',
       telephone: '36861189',
       email: 'Kanesawdatou0@gmail.com',
       structure: 'Mahde Design',
@@ -186,7 +186,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR1996/016',
-      nom: 'Souleymane Boubacar Dramane',
+      nom: 'Souleymane Dramane',
       telephone: '44481705',
       email: 'souleysod@gmail.com',
       structure: 'Ministère de l\'Equipement et des Transports (MET)',
@@ -194,7 +194,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR1992/008',
-      nom: 'Cheikh Ahmedou Ould Mohamed Mokhtar',
+      nom: 'Cheikh Ahmedou ',
       telephone: '46447813',
       email: 'Chahmedoutas@gmail.com',
       structure: 'TASMIM',
@@ -227,7 +227,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR1978/003',
-      nom: 'Mme Diabira Maryannick',
+      nom: 'Diabira Maryannick',
       telephone: '36302689',
       email: 'diabirafmi@yahoo.fr',
       structure: 'CEAE - Cabinet d\'étude d\'architecture et d\'ingénierie',
@@ -235,15 +235,15 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR1992/009',
-      nom: 'Lemat Hamadi El Vadel',
+      nom: 'Lemat Hamadi ',
       telephone: '36309017',
       email: 'Lematt1987@yahoo.fr',
       structure: 'Ministère de l\'Habitat MHUAT',
-      photo: 'assets/La_liste_des_archis/profil homme.jpg'
+      photo: 'assets/La_liste_des_archis/profil femme.jpg'
     },
     {
       matricule: 'AR1993/010',
-      nom: 'Sidi Mohamed O. Med Saleh dit Hafed',
+      nom: 'Sidi Mohamed O. Med',
       telephone: '36301289',
       email: 'betaconsulte@yahoo.fr',
       structure: 'Betaconsult',
@@ -251,7 +251,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR1994/011',
-      nom: 'Abdellahi Ould Ahmed Baba',
+      nom: 'Abdellahi O. Ahmed ',
       telephone: '46457473',
       email: 'Abdellahiaad@yahoo.fr',
       structure: 'AAD',
@@ -260,7 +260,7 @@ export class ListeArchitecte {
    
     {
       matricule: 'AR1995/013',
-      nom: 'Oumeir Hossien HOUESSOU',
+      nom: 'Oumeir Hossien ',
       telephone: '46440331',
       email: 'omerarchitecte@gmail.com',
       structure: 'CREA Aménagement',
@@ -271,7 +271,7 @@ export class ListeArchitecte {
    
     {
       matricule: 'AR2000/019',
-      nom: 'Aziz Ould Med Abdellahi',
+      nom: 'Aziz Ould Med ',
       telephone: '42922682',
       email: 'aziz@example.com',
       structure: 'Ministère de l\'Habitat MHUAT',
@@ -290,7 +290,7 @@ export class ListeArchitecte {
 
     {
       matricule: 'AR2005/024',
-      nom: 'Moujtaba Ould Med Saleck',
+      nom: 'Moujtaba Ould Med',
       telephone: '44685541',
       email: 'moujtaba_w@yahoo.fr',
       structure: 'Ministère de l\'Habitat MHUAT',
@@ -315,7 +315,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2009/028',
-      nom: 'Ahmed Salem Ould HAMOUD',
+      nom: 'Ahmed Salem',
       telephone: '44899676',
       email: 'ahmedarchitecte@yahoo.fr',
       structure: 'STYLE Architecte',
@@ -342,7 +342,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2012/033',
-      nom: 'Cheikh El Moustapha Ould Mohamed Yahya',
+      nom: 'Cheikh El Moustapha ',
       telephone: '26302088',
       email: 'haballasidi@gmail.com',
       structure: 'MIMAR ÉTUDES ET CONSULTATIONS',
@@ -353,7 +353,7 @@ export class ListeArchitecte {
 
     {
       matricule: 'AR2014/037',
-      nom: 'Med Addel Wedoud Med El Kherchy',
+      nom: 'Med Addel Wedoud ',
       telephone: '41443130',
       email: 'arktek-arch-ing@outlook.com',
       structure: 'Arktek',
@@ -361,7 +361,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2014/038',
-      nom: 'Med El Khalil Md Elimine',
+      nom: 'Med El Khalil ',
       telephone: '26210112',
       email: 'khalil9198@gmail.com',
       structure: 'Ministère de l\'Habitat MHUAT',
@@ -370,7 +370,7 @@ export class ListeArchitecte {
 
     {
       matricule: 'AR2014/040',
-      nom: 'Khadija Med Moussa',
+      nom: 'Khadija Med ',
       telephone: '44224043',
       email: 'm.khadija@gmail.com',
       structure: 'Najah',
@@ -378,7 +378,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2014/041',
-      nom: 'Cheikh Ahmed Mohamedou',
+      nom: 'Cheikh Ahmed ',
       telephone: '36106909',
       email: 'Chemed7@hotmail.com',
       structure: 'Ministère de l\'Habitat MHUAT',
@@ -386,7 +386,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2015/042',
-      nom: 'Ahmed Mohamed Sidi',
+      nom: 'Ahmed Mohamed ',
       telephone: '36460001',
       email: 'Ah.ragel2002@gmail.com',
       structure: 'MIEMAR',
@@ -394,7 +394,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2015/043',
-      nom: 'Mettou Hamdi Abdella',
+      nom: 'Mettou Hamdi ',
       telephone: '36330402',
       email: 'mettouhamdi04@gmail.com',
       structure: 'CREA',
@@ -402,7 +402,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2015/044',
-      nom: 'Oumekethoum Brahim Brahim Sidina',
+      nom: 'Oumekethoum  Sidina',
       telephone: '26448017',
       email: 'kelthomsser@yahoo.com',
       structure: 'Kelthom Architect Design intérieur',
@@ -422,7 +422,7 @@ export class ListeArchitecte {
 
     {
       matricule: 'AR2021/050',
-      nom: 'Iman Mohamed Khaled',
+      nom: 'Iman Mohamed ',
       telephone: '36046161',
       email: 'Imk.architecture.design@gmail.com',
       structure: 'IMK',
@@ -430,7 +430,7 @@ export class ListeArchitecte {
     },
     {
       matricule: 'AR2017/051',
-      nom: 'Ahmed Ghaylani Ahmed',
+      nom: 'Ahmed Ghaylani ',
       telephone: '27753289',
       email: 'gailanibarikalla@gmail.com',
       structure: 'Gailani Barikalla',
@@ -456,6 +456,42 @@ export class ListeArchitecte {
       photo: 'assets/La_liste_des_archis/profil homme.jpg'
     }
   ];
+
+  constructor() {
+    // Reorder by sequence number (the part after '/') then rotate to start at AR1974/002
+    this.reorderBySequenceThenRotate('AR1974/002');
+  }
+
+  // Sort members by matricule ascending. Expected format: ARYYYY/NNN
+  sortMembresByMatricule() {
+    this.membres.sort((a: any, b: any) => {
+      const pa = parseMatricule(a.matricule);
+      const pb = parseMatricule(b.matricule);
+      if (pa.year !== pb.year) return pa.year - pb.year;
+      return pa.seq - pb.seq;
+    });
+  }
+
+  // Sort members by sequence number only (NNN part) then rotate to start at given matricule
+  reorderBySequenceThenRotate(startMatricule: string) {
+    this.membres.sort((a: any, b: any) => {
+      const sa = parseMatricule(a.matricule).seq || 0;
+      const sb = parseMatricule(b.matricule).seq || 0;
+      return sa - sb;
+    });
+    if (startMatricule) this.rotateStartAt(startMatricule);
+  }
+
+  // Rotate the sorted array so it starts at the given matricule (if found)
+  rotateStartAt(matricule: string) {
+    if (!matricule) return;
+    const idx = this.membres.findIndex((m: any) => (m.matricule || '').toUpperCase() === matricule.toUpperCase());
+    if (idx > 0) {
+      const head = this.membres.slice(idx);
+      const tail = this.membres.slice(0, idx);
+      this.membres = head.concat(tail);
+    }
+  }
 
   getNamePhoto(nom: string) {
     if (!nom) return 'assets/La_liste_des_archis/profil homme.jpg';
@@ -503,6 +539,30 @@ export class ListeArchitecte {
     img.src = "assets/La_liste_des_archis/profil homme.jpg";
   }
 
+  // Normalize and format telephone for display and href
+  displayTelephone(tel: string) {
+    if (!tel) return 'Non spécifié';
+    return tel.toString().trim();
+  }
+
+  getTelHref(tel: string) {
+    if (!tel) return '';
+    // keep leading + if present, remove other non-digit characters
+    const cleaned = tel.toString().trim().replace(/[^+0-9]/g, '');
+    return `tel:${cleaned}`;
+  }
+
+  // Normalize email for display (lowercase + trimmed)
+  displayEmail(email: string) {
+    if (!email) return 'Non spécifié';
+    return email.toString().trim().toLowerCase();
+  }
+
+  getEmailHref(email: string) {
+    if (!email) return '';
+    return `mailto:${email.toString().trim().toLowerCase()}`;
+  }
+
   normalizePath(path: string) {
     if (!path) return 'assets/utilisateur.svg';
     const p = path.startsWith('/') ? path.slice(1) : path;
@@ -517,5 +577,16 @@ function normalizePathForCompare(p: string) {
   const path = p.startsWith('/') ? p.slice(1) : p;
   // encode spaces for comparison with img.src which will be absolute URL-encoded
   return encodeURI(path);
+}
+
+// Parse matricule string like 'AR1978/003' into numeric parts
+function parseMatricule(m: string) {
+  if (!m) return { year: 0, seq: 0 };
+  const re = /AR(\d{2,4})\/(\d+)/i;
+  const match = m.match(re);
+  if (!match) return { year: 0, seq: 0 };
+  const year = parseInt(match[1], 10) || 0;
+  const seq = parseInt(match[2], 10) || 0;
+  return { year, seq };
 }
 
